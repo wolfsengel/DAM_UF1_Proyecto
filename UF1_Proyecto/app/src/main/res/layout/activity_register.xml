@@ -24,13 +24,13 @@
                 android:id="@+id/login_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/login_title"
-                android:textColor="@color/white"
-                android:textSize="50sp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="128dp"
-                android:textStyle="bold"
-                android:layout_marginEnd="32dp" />
+                android:layout_marginEnd="32dp"
+                android:text="@string/register_title"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/username"
@@ -63,16 +63,20 @@
                 android:textAlignment="center"
                 android:textColorHint="@color/white" />
 
-            <TextView
-                android:id="@+id/password_forgot"
+            <EditText
+                android:id="@+id/password2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:text="@string/forgot_password"
-                android:textColor="@color/white"
-                android:textSize="16sp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/btn_background"
+                android:ems="10"
+                android:hint="@string/Password"
+                android:inputType="textPassword"
                 android:textAlignment="center"
-                android:background="@android:color/transparent" />
+                android:textColorHint="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_button"
@@ -83,16 +87,15 @@
                 android:layout_marginTop="64dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="@string/login_button"
+                android:text="@string/register_button"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 />
             <TextView
                 android:id="@+id/register_button"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
                 android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
                 android:layout_height="wrap_content"
                 android:text="@string/is_registered"
                 android:textColor="@color/white"

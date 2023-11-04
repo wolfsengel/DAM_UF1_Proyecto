@@ -11,6 +11,7 @@
     <string name="register_title">Registrarse</string>
     <string name="forgot_password">¿Ha olvidado su contraseña?</string>
     <string name="not_registered">¿No tienes cuenta? Registrate aquí</string>
+    <string name="is_registered">¿Ya tienes cuenta? Inicia sesión aquí</string>
     <string name="main_title">¿Qué te apetece ver hoy?</string>
     <string name="search">Buscar...</string>
     <string name="search_results">Resultados de la búsqueda</string>
