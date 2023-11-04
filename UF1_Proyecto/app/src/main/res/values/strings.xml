@@ -11,4 +11,11 @@
     <string name="register_title">Registrarse</string>
     <string name="forgot_password">¿Ha olvidado su contraseña?</string>
     <string name="not_registered">¿No tienes cuenta? Registrate aquí</string>
+    <string name="main_title">¿Qué te apetece ver hoy?</string>
+    <string name="search">Buscar...</string>
+    <string name="search_results">Resultados de la búsqueda</string>
+    <string name="search_no_results">No se han encontrado resultados</string>
+    <string name="New_options">Últimos estrenos</string>
+    <string name="Popular_options">Más populares</string>
+    <string name="Top_rated_options">Mejor valoradas</string>
 </resources>
