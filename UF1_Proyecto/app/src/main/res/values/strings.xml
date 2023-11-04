@@ -13,10 +13,20 @@
     <string name="not_registered">¿No tienes cuenta? Registrate aquí</string>
     <string name="is_registered">¿Ya tienes cuenta? Inicia sesión aquí</string>
     <string name="main_title">¿Qué te apetece ver hoy?</string>
-    <string name="search">Buscar...</string>
+    <string name="search">Buscar…</string>
     <string name="search_results">Resultados de la búsqueda</string>
     <string name="search_no_results">No se han encontrado resultados</string>
     <string name="New_options">Últimos estrenos</string>
     <string name="Popular_options">Más populares</string>
     <string name="Top_rated_options">Mejor valoradas</string>
+    <string name="username">Nombre de usuario:</string>"
+    <string name="password">Contraseña:</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="erase_account">Borrar cuenta</string>
+    <string name="profile">Perfil</string>
+    <string name="catalog_title">Catálogo de estrenos</string>
+    <string name="cinesa">Cinesa</string>
+    <string name="yelmo">Yelmo Cines</string>
+    <string name="paco">Salas Paco</string>
+
 </resources>
