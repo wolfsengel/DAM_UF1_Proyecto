@@ -28,5 +28,7 @@
     <string name="cinesa">Cinesa</string>
     <string name="yelmo">Yelmo Cines</string>
     <string name="paco">Salas Paco</string>
+    <string name="sinopsis">Sinopsis</string>
+    <string name="actors">Actores</string>
 
 </resources>
