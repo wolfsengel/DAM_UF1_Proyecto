@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.UF1_Proyecto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">#19191b</item>
     </style>
 
     <style name="Theme.UF1_Proyecto" parent="Base.Theme.UF1_Proyecto" />

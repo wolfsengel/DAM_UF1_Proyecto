@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".recommendationsFragment">
+    tools:context=".Activity.recommendationsFragment">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -65,7 +67,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/cinesaview"
+                    android:id="@+id/lastmovies"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -83,11 +85,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/cinesaview"
+                    app:layout_constraintBottom_toBottomOf="@+id/lastmovies"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/cinesaview"
+                    app:layout_constraintTop_toTopOf="@+id/lastmovies"
                     tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -109,7 +111,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/yelmoview2"
+                    android:id="@+id/popularmovies"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -127,11 +129,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/yelmoview2"
+                    app:layout_constraintBottom_toBottomOf="@+id/popularmovies"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/yelmoview2"
+                    app:layout_constraintTop_toTopOf="@+id/popularmovies"
                     tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -153,13 +155,14 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/pacocinesview3"
+                    android:id="@+id/topmovies"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
                     android:minHeight="200dp"
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
+                    android:paddingBottom="200dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -170,11 +173,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/pacocinesview3"
+                    app:layout_constraintBottom_toBottomOf="@+id/topmovies"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/pacocinesview3"
+                    app:layout_constraintTop_toTopOf="@+id/topmovies"
                     tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
