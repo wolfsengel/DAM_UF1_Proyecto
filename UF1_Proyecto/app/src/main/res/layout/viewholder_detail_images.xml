@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ItemImagenes"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_margin="5dp"
