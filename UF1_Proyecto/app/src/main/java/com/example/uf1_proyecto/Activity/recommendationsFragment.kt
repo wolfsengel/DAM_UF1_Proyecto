@@ -33,10 +33,6 @@ class recommendationsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initView()
-        sendRequest1()
-        sendRequest2()
-        sendRequest3()
     }
 
     private fun sendRequest1() {
@@ -103,24 +99,28 @@ class recommendationsFragment : Fragment() {
     }
 
 
-    private fun initView() {
-        recyclerViewNewmovies = requireView().findViewById(R.id.lastmovies)
+    private fun initView(view: View) {
+        recyclerViewNewmovies = view.findViewById(R.id.lastmovies)
         recyclerViewNewmovies.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewPopular = requireView().findViewById(R.id.popularmovies)
+        recyclerViewPopular = view.findViewById(R.id.popularmovies)
         recyclerViewPopular.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewToprated = requireView().findViewById(R.id.topmovies)
+        recyclerViewToprated = view.findViewById(R.id.topmovies)
         recyclerViewToprated.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        loading1 = requireView().findViewById(R.id.loading)
-        loading2 = requireView().findViewById(R.id.loading2)
-        loading3 = requireView().findViewById(R.id.loading3)
+        loading1 = view.findViewById(R.id.loading)
+        loading2 = view.findViewById(R.id.loading2)
+        loading3 = view.findViewById(R.id.loading3)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recommendations, container, false)
+        val view = inflater.inflate(R.layout.fragment_recommendations, container, false)
+        initView(view)
+        sendRequest1()
+        sendRequest2()
+        sendRequest3()
+        return view
     }
 
 }

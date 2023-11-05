@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/graph_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recommendationsFragment">
+
+    <fragment
+        android:id="@+id/recommendationsFragment"
+        android:name="com.example.uf1_proyecto.Activity.recommendationsFragment"
+        android:label="RecommendationsFragment" >
+        <action
+            android:id="@+id/action_recommendationsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_recommendationsFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.uf1_proyecto.Activity.profileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_recommendationsFragment"
+            app:destination="@id/recommendationsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.uf1_proyecto.Activity.catalogFragment"
+        android:label="CatalogFragment" >
+        <action
+            android:id="@+id/action_catalogFragment_to_recommendationsFragment"
+            app:destination="@id/recommendationsFragment" />
+    </fragment>
 
 </navigation>
