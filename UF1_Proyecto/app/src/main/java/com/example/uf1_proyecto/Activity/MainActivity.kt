@@ -19,5 +19,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.catalogo).setOnClickListener {
             navController.navigate(R.id.catalogFragment)
         }
+
+        findViewById<View>(R.id.homeButton).setOnClickListener {
+            navController.navigate(R.id.recommendationsFragment)
+        }
     }
 }

@@ -42,7 +42,7 @@
 
             <ImageView
                 android:layout_margin="10dp"
-                android:id="@+id/profile"
+                android:id="@+id/catalogo"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -52,7 +52,7 @@
                 android:background="?android:attr/selectableItemBackground" />
 
             <ImageView
-                android:id="@+id/catalogo"
+                android:id="@+id/profile"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
