@@ -33,7 +33,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/estrenos_movies"
+                android:id="@+id/cinesa_movies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -50,7 +50,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/cinesaview"
+                    android:id="@+id/cinesaviewC"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -63,21 +63,21 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
-                    android:id="@+id/loading"
+                    android:id="@+id/loadingC"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/cinesaview"
+                    app:layout_constraintBottom_toBottomOf="@+id/cinesaviewC"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/cinesaview"
+                    app:layout_constraintTop_toTopOf="@+id/cinesaviewC"
                     tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/popular_movies"
+                android:id="@+id/yelmo_movies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -94,7 +94,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/yelmoview2"
+                    android:id="@+id/yelmoviewC"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -107,16 +107,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
-                    android:id="@+id/loading2"
+                    android:id="@+id/loadingC2"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/yelmoview2"
+                    app:layout_constraintBottom_toBottomOf="@+id/yelmoviewC"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/yelmoview2"
+                    app:layout_constraintTop_toTopOf="@+id/yelmoviewC"
                     tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -138,7 +138,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/pacocinesview3"
+                    android:id="@+id/pacocinesviewC"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -150,19 +150,18 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ProgressBar
-                    android:id="@+id/loading3"
+                    android:id="@+id/loadingC3"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/pacocinesview3"
+                    app:layout_constraintBottom_toBottomOf="@+id/pacocinesviewC"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/pacocinesview3"
+                    app:layout_constraintTop_toTopOf="@+id/pacocinesviewC"
                     tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-
 </FrameLayout>

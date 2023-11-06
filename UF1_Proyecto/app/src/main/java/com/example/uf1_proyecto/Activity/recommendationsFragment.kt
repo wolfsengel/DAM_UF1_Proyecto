@@ -58,7 +58,7 @@ class recommendationsFragment : Fragment() {
 
     private fun sendRequest2() {
         mRequestQueue = Volley.newRequestQueue(requireContext())
-        loading1.visibility = View.VISIBLE
+        loading2.visibility = View.VISIBLE
 
         val mStringRequest2 = StringRequest(
             Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=2",
@@ -79,7 +79,7 @@ class recommendationsFragment : Fragment() {
     }
     private fun sendRequest3() {
         mRequestQueue = Volley.newRequestQueue(requireContext())
-        loading1.visibility = View.VISIBLE
+        loading3.visibility = View.VISIBLE
 
         val mStringRequest3 = StringRequest(
             Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=3",
