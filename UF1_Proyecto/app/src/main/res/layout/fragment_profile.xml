@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".Activity.profileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -49,8 +50,8 @@
                         app:layout_constraintStart_toStartOf="@+id/profile_photo_border"
                         app:layout_constraintTop_toTopOf="@+id/profile_photo_border"
                         app:shapeAppearanceOverlay="@style/roundedImageRounded"
-                        app:strokeWidth="1dp"
-                        tools:srcCompat="@drawable/profile" />
+                        app:srcCompat="@drawable/profile"
+                        app:strokeWidth="1dp" />
 
                     <TextView
                         android:id="@+id/usernametag"
