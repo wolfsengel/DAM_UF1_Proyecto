@@ -52,7 +52,7 @@
                         app:layout_constraintStart_toStartOf="@+id/profile_photo_border"
                         app:layout_constraintTop_toTopOf="@+id/profile_photo_border"
                         app:shapeAppearanceOverlay="@style/roundedImageRounded"
-                        app:srcCompat="@drawable/PIKA3"
+                        app:srcCompat="@drawable/pika3"
                         app:strokeWidth="1dp" />
 
                     <TextView

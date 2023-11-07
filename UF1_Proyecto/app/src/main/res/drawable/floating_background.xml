@@ -20,6 +20,5 @@
         android:left="15dp"
         android:right="15dp"
         android:drawable="@drawable/image"
-        android:tint="#BB0000"
         />
 </layer-list>
