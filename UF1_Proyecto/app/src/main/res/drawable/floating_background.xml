@@ -3,9 +3,10 @@
     <item>
         <shape android:shape="oval">
             <gradient
-                android:angle="315"
-                android:endColor="@color/green"
-                android:startColor="@color/pink" />
+                android:angle="45"
+                android:endColor="#D1EFB5"
+                android:startColor="#552800"
+                android:centerColor="#BA7600"/>
         </shape>
     </item>
     <item android:top="3dp" android:bottom="3dp" android:left="3dp" android:right="3dp">
@@ -19,5 +20,6 @@
         android:left="15dp"
         android:right="15dp"
         android:drawable="@drawable/image"
+        android:tint="#BB0000"
         />
 </layer-list>

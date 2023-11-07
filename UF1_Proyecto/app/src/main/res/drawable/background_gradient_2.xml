@@ -5,7 +5,7 @@
             <gradient
                 android:endColor="#19191b"
                 android:centerColor="#19191b"
-                android:startColor="#507c3660"
+                android:startColor="#552800"
                 android:type="radial"
                 android:gradientRadius="100%p"
                 android:centerX="0.3"
@@ -17,7 +17,7 @@
             <gradient
                 android:endColor="@android:color/transparent"
                 android:centerColor="@android:color/transparent"
-                android:startColor="#300f8a75"
+                android:startColor="#BA7600"
                 android:type="radial"
                 android:gradientRadius="100%p"
                 android:centerX="0.5"
@@ -29,7 +29,7 @@
             <gradient
                 android:endColor="@android:color/transparent"
                 android:centerColor="@android:color/transparent"
-                android:startColor="#400f8a75"
+                android:startColor="#D1EFB5"
                 android:type="radial"
                 android:gradientRadius="100%p"
                 android:centerX="0.7"

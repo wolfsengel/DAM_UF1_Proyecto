@@ -5,4 +5,8 @@
     <color name="main_background">#19191b</color>
     <color name="pink">#e45eb0</color>
     <color name="green">#34e3c4</color>
+    <color name="wheat">#FFFFB0</color>
+    <color name="wood">#552800</color>
+    <color name="golden">#BA7600</color>
+    <color name="red">#ff0000</color>
 </resources>

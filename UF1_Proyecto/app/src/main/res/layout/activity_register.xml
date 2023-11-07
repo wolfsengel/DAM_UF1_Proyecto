@@ -29,7 +29,7 @@
                 android:layout_marginTop="128dp"
                 android:layout_marginEnd="32dp"
                 android:text="@string/register_title"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="50sp"
                 android:textStyle="bold" />
 
@@ -46,8 +46,9 @@
                 android:hint="@string/UserName"
                 android:inputType="text"
                 android:textAlignment="center"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"/>
+                android:textColor="@color/wood"
+                android:textColorHint="@color/wood"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/passwordR"
@@ -62,8 +63,9 @@
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white" />
+                android:textColor="@color/wood"
+                android:textColorHint="@color/wood"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/passwordR2"
@@ -78,8 +80,9 @@
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white" />
+                android:textColor="@color/wood"
+                android:textColorHint="@color/wood"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/register_button_deltodo"
@@ -91,7 +94,7 @@
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/btn_background"
                 android:text="@string/register_button"
-                android:textColor="@color/white"
+                android:textColor="@color/wood"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -104,7 +107,7 @@
                 android:padding="10dp"
                 android:text="@string/is_registered"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>

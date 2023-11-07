@@ -4,7 +4,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="#2f2f39">
+    android:background="#552800"
+
+    >
 
     <ImageView
         android:id="@+id/moviepicsmall"
