@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".Activity.LoginActivity">
 
     <ScrollView
@@ -35,18 +36,18 @@
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
-                android:layout_marginTop="128dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_height="50dp"
-                android:hint="@string/UserName"
-                android:textAlignment="center"
-                android:ems="10"
-                android:inputType="text"
-                android:textColorHint="@color/white"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="128dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/btn_background"
-                />
+                android:ems="10"
+                android:hint="@string/UserName"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
 
             <EditText
                 android:id="@+id/password"
@@ -61,7 +62,8 @@
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                android:textColorHint="@color/white" />
+                android:textColorHint="@color/white"
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/password2"
@@ -76,33 +78,34 @@
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                android:textColorHint="@color/white" />
+                android:textColorHint="@color/white"
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_button"
+                style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                style="@android:style/Widget.Button"
-                android:background="@drawable/btn_background"
-                android:layout_marginTop="64dp"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="64dp"
                 android:layout_marginEnd="32dp"
+                android:background="@drawable/btn_background"
                 android:text="@string/register_button"
                 android:textColor="@color/white"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <TextView
-                android:padding="10dp"
                 android:id="@+id/register_button"
                 android:layout_width="match_parent"
-                android:layout_marginTop="12dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
                 android:text="@string/is_registered"
-                android:textColor="@color/white"
-                android:textSize="16sp"
                 android:textAlignment="center"
-                android:background="@android:color/transparent" />
+                android:textColor="@color/white"
+                android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
