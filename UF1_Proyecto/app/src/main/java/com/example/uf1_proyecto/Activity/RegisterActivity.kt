@@ -24,14 +24,14 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        userTxt = findViewById(R.id.usernameTxt)
+        userTxt = findViewById(R.id.usernameR)
         passwordTxt = findViewById(R.id.passwordR)
         passwordTxt2 = findViewById(R.id.passwordR2)
         registerButton = findViewById(R.id.register_button_deltodo)
 
         registerButton.setOnClickListener {
 
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

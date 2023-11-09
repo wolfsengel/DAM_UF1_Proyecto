@@ -10,7 +10,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var userTxt: EditText
     private lateinit var passwordTxt: EditText
     private lateinit var loginButton: Button
-    private lateinit var registerButton: TextView
+    private lateinit var registerButtonL: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         userTxt = findViewById(R.id.usernameTxt)
         passwordTxt = findViewById(R.id.passwordTxt)
         loginButton = findViewById(R.id.login_button)
-        registerButton = findViewById(R.id.register_button)
+        registerButtonL = findViewById(R.id.register_button)
 
         loginButton.setOnClickListener {
             if (userTxt.text.toString().isEmpty() || passwordTxt.text.toString().isEmpty()) {
@@ -32,9 +32,9 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        registerButton.setOnClickListener{
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+        registerButtonL.setOnClickListener{
+            val intent2 = Intent(this, RegisterActivity::class.java)
+            startActivity(intent2)
         }
     }
 }

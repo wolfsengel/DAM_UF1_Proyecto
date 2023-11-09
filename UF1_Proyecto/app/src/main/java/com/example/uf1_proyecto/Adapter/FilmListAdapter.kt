@@ -11,7 +11,7 @@ import com.example.uf1_proyecto.Domain.*
 import com.example.uf1_proyecto.*
 import com.example.uf1_proyecto.Activity.*
 
-class FilmListAdapter(var items: ListFilm) :
+class FilmListAdapter(private var items: ListFilm) :
     RecyclerView.Adapter<FilmListAdapter.ViewHolder>() {
     lateinit var context: Context
 
@@ -27,13 +27,13 @@ class FilmListAdapter(var items: ListFilm) :
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmListAdapter.ViewHolder {
-        var inflate = LayoutInflater.from(parent.context).inflate(R.layout.viewholder_film,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val inflate = LayoutInflater.from(parent.context).inflate(R.layout.viewholder_film,parent,false)
         context = parent.context
         return ViewHolder(inflate)
     }
 
-    override fun onBindViewHolder(holder: FilmListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.text = items.data[position].title
         holder.score.text = items.data[position].imdbRating
 

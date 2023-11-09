@@ -40,7 +40,7 @@ class recommendationsFragment : Fragment() {
         loading1.visibility = View.VISIBLE
 
         val mStringRequest = StringRequest(
-            Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=1",
+            Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=11",
             { response ->
                 val gson = Gson()
                 loading1.visibility = View.GONE
@@ -61,7 +61,7 @@ class recommendationsFragment : Fragment() {
         loading2.visibility = View.VISIBLE
 
         val mStringRequest2 = StringRequest(
-            Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=2",
+            Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=21",
             { response ->
                 val gson = Gson()
                 loading2.visibility = View.GONE
@@ -82,7 +82,7 @@ class recommendationsFragment : Fragment() {
         loading3.visibility = View.VISIBLE
 
         val mStringRequest3 = StringRequest(
-            Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=3",
+            Request.Method.GET, "https://moviesapi.ir/api/v1/movies?page=15",
             { response ->
                 val gson = Gson()
                 loading3.visibility = View.GONE
