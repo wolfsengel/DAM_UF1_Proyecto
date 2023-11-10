@@ -1,22 +1,16 @@
 package com.example.uf1_proyecto.Activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.*
-import com.android.volley.toolbox.*
-import com.bumptech.glide.Glide
-import com.example.uf1_proyecto.Adapter.*
-import com.example.uf1_proyecto.Domain.*
+import com.android.volley.RequestQueue
+import com.android.volley.toolbox.StringRequest
 import com.example.uf1_proyecto.R
-import com.google.android.material.imageview.ShapeableImageView
-import com.google.gson.Gson
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var mRequestQueue: RequestQueue
@@ -33,7 +27,6 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var pic1:ImageView
     private lateinit var pic2: ImageView
     private lateinit var backImg: ImageView
-    private lateinit var adapterImgList: ImageListAdapter
     private lateinit var recyclerView: RecyclerView
 
 
@@ -43,10 +36,10 @@ class DetailActivity : AppCompatActivity() {
 
         idFilm = intent.getIntExtra("id", 0)
         initView()
-        sendRequest()
+
     }
 
-    private fun sendRequest() {
+    /*private fun sendRequest() {
         mRequestQueue = Volley.newRequestQueue(this)
         progressBar.visibility = ProgressBar.VISIBLE
         scrollView.visibility = View.GONE
@@ -75,7 +68,7 @@ class DetailActivity : AppCompatActivity() {
             }
         )
         mRequestQueue.add(mStringRequest)
-    }
+    }*/
 
     private fun initView() {
         progressBar = findViewById(R.id.detailLoading)

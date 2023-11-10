@@ -9,7 +9,7 @@
     >
 
     <ImageView
-        android:id="@+id/moviepicsmall"
+        android:id="@+id/pokemon_image"
         android:layout_width="120dp"
         android:layout_height="180dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titleText"
+        android:id="@+id/pokemon_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -30,9 +30,9 @@
         android:textColor="@color/white"
         android:textSize="12sp"
 
-        app:layout_constraintEnd_toEndOf="@+id/moviepicsmall"
-        app:layout_constraintStart_toStartOf="@+id/moviepicsmall"
-        app:layout_constraintTop_toBottomOf="@+id/moviepicsmall" />
+        app:layout_constraintEnd_toEndOf="@+id/pokemon_image"
+        app:layout_constraintStart_toStartOf="@+id/pokemon_image"
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_image" />
 
     <ImageView
         android:id="@+id/scoreStar"
@@ -42,20 +42,20 @@
         android:layout_marginBottom="8dp"
         android:src="@drawable/ic_round_star_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/titleText"
-        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintStart_toStartOf="@+id/pokemon_name"
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_name"
         app:tint="#ffc107" />
 
     <TextView
-        android:id="@+id/scoretxt"
+        android:id="@+id/pokemon_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="2dp"
         android:text="score"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/scoreStar"
-        app:layout_constraintEnd_toEndOf="@+id/titleText"
+        app:layout_constraintEnd_toEndOf="@+id/pokemon_name"
         app:layout_constraintStart_toEndOf="@+id/scoreStar"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
