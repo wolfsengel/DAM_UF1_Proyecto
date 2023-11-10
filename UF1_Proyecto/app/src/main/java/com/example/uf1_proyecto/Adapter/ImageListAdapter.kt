@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.*
 import com.bumptech.glide.Glide
 import com.example.uf1_proyecto.R
 
-
-
 class ImageListAdapter( var images: List<String>) :
     RecyclerView.Adapter<ImageListAdapter.ViewHolder>() {
 
