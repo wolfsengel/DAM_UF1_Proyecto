@@ -15,7 +15,7 @@ import com.example.uf1_proyecto.Domain.*
 import com.example.uf1_proyecto.R
 import com.google.gson.Gson
 
-class catalogFragment : Fragment() {
+class CatalogFragment : Fragment() {
 
     private lateinit var adapterCinesa: FilmListAdapter
     private lateinit var adapterYelmo: FilmListAdapter

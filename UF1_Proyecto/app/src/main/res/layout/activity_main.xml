@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="bottom"
-            android:backgroundTint="#282f32">
+            android:backgroundTint="@color/main_background">
 
             <ImageView
                 android:id="@+id/catalogo"

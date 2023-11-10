@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 import com.example.uf1_proyecto.R
 
-class profileFragment : Fragment() {
+class ProfileFragment : Fragment() {
     private lateinit var borrarBtn: Button
     private lateinit var cerrarSesionBtn: Button
     private lateinit var nombreUsuarioP: TextView

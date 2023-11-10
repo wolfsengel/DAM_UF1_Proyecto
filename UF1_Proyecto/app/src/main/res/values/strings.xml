@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">UF1_Proyecto</string>
-    <string name="intro_title">¿No sabes que ver hoy?</string>
-    <string name="intro_subtitle">Descubre las mejores películas y series</string>
+    <string name="app_name">Pokedex</string>
+    <string name="intro_title">Pokedex Oficial</string>
+    <string name="intro_subtitle">Descubre los mejores pokémons y sus evoluciones</string>
     <string name="intro_button">Entrar</string>
     <string name="login_title">Iniciar sesión</string>
     <string name="UserName">Nombre de usuario</string>
@@ -12,23 +12,27 @@
     <string name="forgot_password">¿Ha olvidado su contraseña?</string>
     <string name="not_registered">¿No tienes cuenta? Registrate aquí</string>
     <string name="is_registered">¿Ya tienes cuenta? Inicia sesión aquí</string>
-    <string name="main_title">¿Qué te apetece ver hoy?</string>
+    <string name="main_title">¿Qué pokémon te apetece ver hoy?</string>
     <string name="search">Buscar…</string>
     <string name="search_results">Resultados de la búsqueda</string>
     <string name="search_no_results">No se han encontrado resultados</string>
-    <string name="New_options">Últimos estrenos</string>
+    <string name="New_options">Primera generación</string>
     <string name="Popular_options">Más populares</string>
-    <string name="Top_rated_options">Mejor valoradas</string>
+    <string name="Top_rated_options">Legendarios</string>
     <string name="username">Nombre de usuario:</string>"
     <string name="password">Contraseña:</string>
     <string name="logout">Cerrar sesión</string>
     <string name="erase_account">Borrar cuenta</string>
     <string name="profile">Perfil</string>
-    <string name="catalog_title">Catálogo de estrenos</string>
-    <string name="cinesa">Cinesa</string>
-    <string name="yelmo">Yelmo Cines</string>
-    <string name="paco">Salas Paco</string>
+    <string name="catalog_title">Compra de cartas</string>
+    <string name="cinesa">Santiago de COmpostela</string>
+    <string name="yelmo">España</string>
+    <string name="paco">Global</string>
     <string name="sinopsis">Sinopsis</string>
     <string name="actors">Actores</string>
+    <string name="buscar">Buscar</string>
+    <string name="no_results_subtitle">Prueba a buscar otra cosa</string>
+    <string name="posible_results">Quizás te guste también</string>
+
 
 </resources>

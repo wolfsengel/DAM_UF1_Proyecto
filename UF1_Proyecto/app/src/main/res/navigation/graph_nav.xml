@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/recommendationsFragment"
-        android:name="com.example.uf1_proyecto.Activity.recommendationsFragment"
+        android:name="com.example.uf1_proyecto.Activity.RecommendationsFragment"
         android:label="RecommendationsFragment" >
         <action
             android:id="@+id/action_recommendationsFragment_to_profileFragment"
@@ -15,11 +15,14 @@
         <action
             android:id="@+id/action_recommendationsFragment_to_catalogFragment"
             app:destination="@id/catalogFragment" />
+        <action
+            android:id="@+id/action_recommendationsFragment_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.uf1_proyecto.Activity.profileFragment"
+        android:name="com.example.uf1_proyecto.Activity.ProfileFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFragment_to_recommendationsFragment"
@@ -28,11 +31,21 @@
 
     <fragment
         android:id="@+id/catalogFragment"
-        android:name="com.example.uf1_proyecto.Activity.catalogFragment"
+        android:name="com.example.uf1_proyecto.Activity.CatalogFragment"
         android:label="CatalogFragment" >
         <action
             android:id="@+id/action_catalogFragment_to_recommendationsFragment"
             app:destination="@id/recommendationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.example.uf1_proyecto.Activity.SearchResultsFragment"
+        android:label="fragment_search_results"
+        tools:layout="@layout/fragment_search_results" >
+        <argument
+            android:name="search_item"
+            app:argType="string"
+            android:defaultValue="null" />
     </fragment>
 
 </navigation>

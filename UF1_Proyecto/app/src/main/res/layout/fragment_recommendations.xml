@@ -7,7 +7,7 @@
     android:background="@color/main_background"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".Activity.recommendationsFragment">
+    tools:context=".Activity.RecommendationsFragment">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -31,24 +31,43 @@
                 android:layout_marginTop="24dp"
                 android:text="@string/main_title"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/search_bar"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/search_edt_background"
-                android:drawableStart="@drawable/search"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="@string/search"
-                android:inputType="text"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="16sp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_edt_background"
+                    android:drawableEnd="@drawable/search"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/wheat"
+                    android:ems="10"
+                    android:hint="@string/search"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textColor="@color/wheat"
+                    android:textColorHint="@color/wheat"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/searchBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/buscar" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/estrenos_movies"
@@ -59,7 +78,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
                 android:text="@string/New_options"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -103,7 +122,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
                 android:text="@string/Popular_options"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -147,7 +166,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
                 android:text="@string/Top_rated_options"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
