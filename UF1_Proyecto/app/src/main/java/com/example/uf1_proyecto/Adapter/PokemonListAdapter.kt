@@ -19,9 +19,9 @@ class PokemonListAdapter(internal var context: Context, internal var pokemonList
             var pokemonImage: ImageView
             var pokemonId: TextView
             init {
-                pokemonName = itemView.findViewById(R.id.pokemon_name) as TextView
-                pokemonImage = itemView.findViewById(R.id.pokemon_image) as ImageView
-                pokemonId = itemView.findViewById(R.id.pokemon_id) as TextView
+                pokemonName = itemView.findViewById(R.id.pokemon_name)
+                pokemonImage = itemView.findViewById(R.id.pokemon_image)
+                pokemonId = itemView.findViewById(R.id.pokemon_id)
             }
         }
 
@@ -36,7 +36,11 @@ class PokemonListAdapter(internal var context: Context, internal var pokemonList
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(context).load(pokemonList.pokemon!![position].img).into(holder.pokemonImage)
+        Glide.with(context)
+            .load(pokemonList.pokemon!![position].img)
+            .error(R.drawable.pika_intro) // imagen por defecto en caso de error
+            .into(holder.pokemonImage)
+
         holder.pokemonName.text = pokemonList.pokemon!![position].name
         holder.pokemonId.text = pokemonList.pokemon!![position].id.toString()
     }
