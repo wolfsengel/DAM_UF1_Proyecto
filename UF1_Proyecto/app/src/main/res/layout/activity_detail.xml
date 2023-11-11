@@ -31,6 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
+                    android:contentDescription="Cosas"
                     android:id="@+id/pokemongradient"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -115,37 +116,37 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableStart="@drawable/ic_round_star_24"
                         android:drawablePadding="5dp"
-                        android:drawableTint="@color/white"
                         android:gravity="center_vertical"
                         android:text="0"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        app:drawableStartCompat="@drawable/ic_round_star_24"
+                        app:drawableTint="@color/white" />
 
                     <TextView
                         android:id="@+id/pokeHeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableStart="@drawable/ic_round_access_time_24"
                         android:drawablePadding="5dp"
-                        android:drawableTint="@color/white"
                         android:gravity="center_vertical"
                         android:text="0"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        app:drawableTint="@color/white"
+                        app:drawableStartCompat="@drawable/ic_round_access_time_24" />
 
                     <TextView
                         android:id="@+id/pokeWeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_round_calendar_today_24"
                         android:drawablePadding="5dp"
-                        android:drawableTint="@color/white"
                         android:gravity="center_vertical"
                         android:text="0"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/white"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        app:drawableStartCompat="@drawable/ic_round_calendar_today_24"
+                        app:drawableTint="@color/white" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -154,16 +155,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:drawableStart="@drawable/ic_round_info_24"
                 android:drawablePadding="5dp"
-                android:drawableTint="@color/white"
                 android:gravity="center_vertical"
                 android:text="@string/sinopsis"
                 android:textColor="@color/white"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:drawableStartCompat="@drawable/ic_round_info_24"
+                app:drawableTint="@color/white" />
 
             <TextView
                 android:id="@+id/sinopsistext"
@@ -182,16 +183,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:drawableStart="@drawable/ic_round_person_24"
                 android:drawablePadding="5dp"
-                android:drawableTint="@color/white"
                 android:gravity="center_vertical"
                 android:text="@string/actors"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@id/sinopsistext"
                 app:layout_constraintStart_toStartOf="@id/sinopsistext"
-                app:layout_constraintTop_toBottomOf="@+id/sinopsistext" />
+                app:layout_constraintTop_toBottomOf="@+id/sinopsistext"
+                app:drawableStartCompat="@drawable/ic_round_person_24"
+                app:drawableTint="@color/white" />
 
             <TextView
                 android:id="@+id/actorstext"
