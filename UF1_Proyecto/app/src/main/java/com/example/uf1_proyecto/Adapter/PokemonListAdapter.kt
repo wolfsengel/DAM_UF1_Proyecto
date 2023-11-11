@@ -38,7 +38,7 @@ class PokemonListAdapter(internal var context: Context, internal var pokemonList
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context)
             .load(pokemonList.pokemon!![position].img)
-            .error(R.drawable.pika_intro) // imagen por defecto en caso de error
+            .error(R.drawable.pika_intro)
             .into(holder.pokemonImage)
 
         holder.pokemonName.text = pokemonList.pokemon!![position].name

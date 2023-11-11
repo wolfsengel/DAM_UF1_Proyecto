@@ -99,7 +99,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/register_button"
+                android:id="@+id/reIniciaSesion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -107,7 +107,7 @@
                 android:padding="10dp"
                 android:text="@string/is_registered"
                 android:textAlignment="center"
-                android:textColor="@color/wheat"
+                android:textColor="@color/wood"
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
