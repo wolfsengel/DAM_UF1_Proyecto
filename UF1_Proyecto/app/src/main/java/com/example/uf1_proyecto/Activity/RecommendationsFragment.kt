@@ -4,8 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +25,10 @@ import com.google.gson.Gson
 class RecommendationsFragment : Fragment() {
 
     private lateinit var adapterPrimGen: PokemonListAdapter
-    private lateinit var recyclerViewNewmovies: RecyclerView
+    private lateinit var recyclerViewPrimGen: RecyclerView
+
+    private lateinit var searchBtn: Button
+    private lateinit var buscardor: EditText
 
     private lateinit var mRequestQueue: RequestQueue
 
@@ -42,7 +49,7 @@ class RecommendationsFragment : Fragment() {
                 loading1.visibility = View.GONE
                 val items: PokeItemK = gson.fromJson(response, PokeItemK::class.java)
                 adapterPrimGen = PokemonListAdapter(requireContext(),items)
-                recyclerViewNewmovies.adapter = adapterPrimGen
+                recyclerViewPrimGen.adapter = adapterPrimGen
             },
             { error ->
                 loading1.visibility = View.GONE
@@ -54,9 +61,17 @@ class RecommendationsFragment : Fragment() {
 
 
     private fun initView(view: View) {
-        recyclerViewNewmovies = view.findViewById(R.id.lastmovies)
-        recyclerViewNewmovies.layoutManager = GridLayoutManager(requireContext(),3, LinearLayoutManager.VERTICAL, false)
+        recyclerViewPrimGen = view.findViewById(R.id.lastmovies)
+        recyclerViewPrimGen.layoutManager = GridLayoutManager(requireContext(),3, LinearLayoutManager.VERTICAL, false)
         loading1 = view.findViewById(R.id.loading)
+        searchBtn = view.findViewById(R.id.searchBtn)
+        searchBtn.setOnClickListener {
+            val navigator: NavController = findNavController()
+            val bundle = Bundle()
+            buscardor = view.findViewById(R.id.search_bar)
+            bundle.putString("busca", buscardor.text.toString())
+            navigator.navigate(R.id.searchFragment, bundle)
+        }
     }
 
     override fun onCreateView(

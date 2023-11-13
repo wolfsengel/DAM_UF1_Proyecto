@@ -17,7 +17,7 @@
             app:destination="@id/catalogFragment" />
         <action
             android:id="@+id/action_recommendationsFragment_to_searchResultsFragment"
-            app:destination="@id/searchResultsFragment" />
+            app:destination="@id/searchFragment" />
     </fragment>
 
     <fragment
@@ -38,7 +38,7 @@
             app:destination="@id/recommendationsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/searchResultsFragment"
+        android:id="@+id/searchFragment"
         android:name="com.example.uf1_proyecto.Activity.SearchResultsFragment"
         android:label="fragment_search_results"
         tools:layout="@layout/fragment_search_results" >
