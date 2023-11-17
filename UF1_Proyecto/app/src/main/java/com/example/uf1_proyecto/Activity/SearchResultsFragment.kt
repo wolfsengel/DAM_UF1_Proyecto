@@ -1,12 +1,14 @@
 package com.example.uf1_proyecto.Activity
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.*
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.*
+import com.android.volley.Request
+import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.uf1_proyecto.Adapter.PokemonListAdapter
@@ -19,7 +21,7 @@ class SearchResultsFragment : Fragment() {
     private lateinit var adapterResultados: PokemonListAdapter
     private lateinit var recyclerResultados: RecyclerView
 
-    private var busca: Int = 0
+    private var busca: String = ""
     private lateinit var searchTxt: TextView
 
     private lateinit var mRequestQueue: RequestQueue
@@ -34,7 +36,7 @@ class SearchResultsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search_results, container, false)
 
-        busca = arguments?.getInt("busqueda") ?: 0
+        busca = arguments?.getString("busqueda").toString()
 
         initView(view)
         sendRequest()
@@ -51,7 +53,7 @@ class SearchResultsFragment : Fragment() {
                 val gson = Gson()
                 val items: PokeItemK = gson.fromJson(response, PokeItemK::class.java)
                 val itemsFiltered: PokeItemK = items
-                itemsFiltered.pokemon = items.pokemon!!.filter { it.id == busca}
+                itemsFiltered.pokemon = items.pokemon!!.filter { it.name!!.contains(busca)}
                 adapterResultados = PokemonListAdapter(requireContext(),itemsFiltered)
                 recyclerResultados.adapter = adapterResultados
             },

@@ -65,6 +65,7 @@ class RecommendationsFragment : Fragment() {
         recyclerViewPrimGen.layoutManager = GridLayoutManager(requireContext(),3, LinearLayoutManager.VERTICAL, false)
         loading1 = view.findViewById(R.id.loading)
         searchBtn = view.findViewById(R.id.searchBtn)
+
         searchBtn.setOnClickListener {
             val navigator: NavController = findNavController()
             val bundle = Bundle()
@@ -72,6 +73,7 @@ class RecommendationsFragment : Fragment() {
             bundle.putString("search", buscardor.text.toString())
             navigator.navigate(R.id.searchFragment, bundle)
         }
+
     }
 
     override fun onCreateView(
