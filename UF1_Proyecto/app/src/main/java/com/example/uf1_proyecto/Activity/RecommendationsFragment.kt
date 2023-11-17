@@ -69,7 +69,7 @@ class RecommendationsFragment : Fragment() {
             val navigator: NavController = findNavController()
             val bundle = Bundle()
             buscardor = view.findViewById(R.id.search_bar)
-            bundle.putString("busca", buscardor.text.toString())
+            bundle.putString("search", buscardor.text.toString())
             navigator.navigate(R.id.searchFragment, bundle)
         }
     }

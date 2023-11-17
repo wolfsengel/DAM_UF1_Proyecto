@@ -27,7 +27,6 @@ class PokemonListAdapter(internal var context: Context, internal var pokemonList
             pokemonId = itemView.findViewById(R.id.pokemon_id)
             itemView.setOnClickListener(this)
         }
-
         override fun onClick(v: View?) {
             val position = adapterPosition
             val clickedPokemon = pokemonList.pokemon!![position]

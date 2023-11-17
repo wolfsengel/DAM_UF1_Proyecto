@@ -43,7 +43,7 @@
         android:label="fragment_search_results"
         tools:layout="@layout/fragment_search_results" >
         <argument
-            android:name="search_item"
+            android:name="search"
             app:argType="integer" />
     </fragment>
 

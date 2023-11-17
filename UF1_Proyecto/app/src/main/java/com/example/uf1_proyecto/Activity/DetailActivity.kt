@@ -22,6 +22,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var pokemonSpawnChance: TextView
     private lateinit var pokemonAvgSpawns: TextView
     private lateinit var pokemonSpawnTime: TextView
+    private lateinit var pokemonWeaknesses: TextView
 
     private lateinit var backButton: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +51,7 @@ class DetailActivity : AppCompatActivity() {
         pokemonSpawnTime = findViewById(R.id.timespawn_text)
         pokemonType = findViewById(R.id.typetext)
         backButton = findViewById(R.id.backImg)
+        pokemonWeaknesses = findViewById(R.id.weak_text)
 
         backButton.setOnClickListener {
             finish()
@@ -68,6 +70,7 @@ class DetailActivity : AppCompatActivity() {
         val spawnChance = intent.getStringExtra("pokemonSpawnChance")
         val avgSpawns = intent.getStringExtra("pokemonAvgSpawns")
         val spawnTime = intent.getStringExtra("pokemonSpawnTime")
+        val weaknesses = intent.getStringExtra("pokemonWeaknesses")
 
 
         pokemonName.text = name
@@ -75,12 +78,13 @@ class DetailActivity : AppCompatActivity() {
         pokemonHeight.text = height
         pokemonWeight.text = weight
         pokemonType.text = type
-        pokemonCandy.text = candy
-        pokemonCandyCount.text = candyCount
-        pokemonEgg.text = egg
+        pokemonCandy.text = if (candy == "None" ) "--X--" else candy
+        pokemonCandyCount.text = if (candyCount == "null" ) "--X--" else candyCount
+        pokemonEgg.text = if (egg == "Not in Eggs" ) "--X--" else egg
         pokemonSpawnChance.text = spawnChance
         pokemonAvgSpawns.text = avgSpawns
-        pokemonSpawnTime.text = spawnTime
+        pokemonSpawnTime.text = if (spawnTime == "N/A") "--:--" else spawnTime
+        pokemonWeaknesses.text = if (weaknesses == "null") "--X--" else weaknesses
 
         Glide.with(this).load(image).into(pokemonImagegradient)
         Glide.with(this).load(image).into(pokemonImage)
