@@ -36,5 +36,7 @@
     <string name="type">Tipo</string>
     <string name="avg_spawn">Media de aparición</string>
     <string name="spawn_time">Hora de aparición</string>
+    <string name="egg">Huevo del Pokemon</string>
+    <string name="egg_count">Número de huevos necesarios</string>
 
 </resources>
