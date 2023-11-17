@@ -29,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
     private fun initView() {
 
         pokemonName = findViewById(R.id.pokemonname)
-        pokemonId = findViewById(R.id.pokeId)
+        pokemonId = findViewById(R.id.pokeId_detail)
         pokemonHeight = findViewById(R.id.pokeHeight)
         pokemonWeight = findViewById(R.id.pokeWeight)
         pokemonImage = findViewById(R.id.pokemonimagenormal)

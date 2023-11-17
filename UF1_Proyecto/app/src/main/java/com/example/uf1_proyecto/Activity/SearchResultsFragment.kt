@@ -19,8 +19,7 @@ class SearchResultsFragment : Fragment() {
     private lateinit var adapterResultados: PokemonListAdapter
     private lateinit var recyclerResultados: RecyclerView
 
-    private var busca: String? = arguments?.getString("busqueda")
-
+    private var busca: Int = 0
     private lateinit var searchTxt: TextView
 
     private lateinit var mRequestQueue: RequestQueue
@@ -34,6 +33,8 @@ class SearchResultsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search_results, container, false)
+
+        busca = arguments?.getInt("busqueda") ?: 0
 
         initView(view)
         sendRequest()
@@ -50,7 +51,7 @@ class SearchResultsFragment : Fragment() {
                 val gson = Gson()
                 val items: PokeItemK = gson.fromJson(response, PokeItemK::class.java)
                 val itemsFiltered: PokeItemK = items
-                itemsFiltered.pokemon = items.pokemon!!.filter { it.name!!.contains(busca.toString(), true)}
+                itemsFiltered.pokemon = items.pokemon!!.filter { it.id == busca}
                 adapterResultados = PokemonListAdapter(requireContext(),itemsFiltered)
                 recyclerResultados.adapter = adapterResultados
             },
@@ -62,9 +63,10 @@ class SearchResultsFragment : Fragment() {
 
     private fun initView(view: View) {
         searchTxt = view.findViewById(R.id.busquedaTxt)
-        searchTxt.text = busca
+        searchTxt.text = busca.toString()
         recyclerResultados = view.findViewById(R.id.resultados)
         recyclerResultados.layoutManager = androidx.recyclerview.widget.GridLayoutManager(requireContext(),3, androidx.recyclerview.widget.LinearLayoutManager.VERTICAL, false)
     }
 
 }
+

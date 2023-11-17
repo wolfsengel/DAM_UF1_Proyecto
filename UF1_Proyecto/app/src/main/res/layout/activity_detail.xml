@@ -112,7 +112,7 @@
                     app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
-                        android:id="@+id/pokeId"
+                        android:id="@+id/pokeId_detail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -126,14 +126,14 @@
                     <TextView
                         android:id="@+id/pokeHeight"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="20dp"
                         android:layout_weight="1"
                         android:drawablePadding="5dp"
                         android:gravity="center_vertical"
                         android:text="0"
                         android:textColor="@color/white"
-                        app:drawableTint="@color/white"
-                        app:drawableStartCompat="@drawable/ic_round_access_time_24" />
+                        app:drawableStartCompat="@drawable/height"
+                        app:drawableTint="@color/white" />
 
                     <TextView
                         android:id="@+id/pokeWeight"
@@ -144,76 +144,95 @@
                         android:text="0"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/white"
-                        tools:ignore="RtlCompat"
-                        app:drawableStartCompat="@drawable/ic_round_calendar_today_24"
-                        app:drawableTint="@color/white" />
+                        app:drawableStartCompat="@drawable/ic_weight"
+                        app:drawableTint="@color/white"
+                        tools:ignore="RtlCompat" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/sinopsistag"
+                android:id="@+id/typetag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
-                android:text="@string/sinopsis"
+                android:text="@string/type"
                 android:textColor="@color/white"
                 android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_kind_pok"
+                app:drawableTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-                app:drawableStartCompat="@drawable/ic_round_info_24"
-                app:drawableTint="@color/white" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
             <TextView
-                android:id="@+id/sinopsistext"
+                android:id="@+id/typetext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Test"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/sinopsistag"
-                app:layout_constraintStart_toStartOf="@id/sinopsistag"
-                app:layout_constraintTop_toBottomOf="@+id/sinopsistag" />
+                app:layout_constraintEnd_toEndOf="@id/typetag"
+                app:layout_constraintStart_toStartOf="@id/typetag"
+                app:layout_constraintTop_toBottomOf="@+id/typetag" />
 
             <TextView
-                android:id="@+id/actorstag"
+                android:id="@+id/spawn_tag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
-                android:text="@string/actors"
+                android:text="@string/avg_spawn"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@id/sinopsistext"
-                app:layout_constraintStart_toStartOf="@id/sinopsistext"
-                app:layout_constraintTop_toBottomOf="@+id/sinopsistext"
-                app:drawableStartCompat="@drawable/ic_round_person_24"
-                app:drawableTint="@color/white" />
+                app:drawableStartCompat="@drawable/ic_round_access_time_24"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/typetext"
+                app:layout_constraintStart_toStartOf="@id/typetext"
+                app:layout_constraintTop_toBottomOf="@+id/typetext" />
 
             <TextView
-                android:id="@+id/actorstext"
+                android:id="@+id/spawn_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Test"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/actorstag"
-                app:layout_constraintStart_toStartOf="@id/actorstag"
-                app:layout_constraintTop_toBottomOf="@+id/actorstag" />
+                app:layout_constraintEnd_toEndOf="@id/spawn_tag"
+                app:layout_constraintStart_toStartOf="@id/spawn_tag"
+                app:layout_constraintTop_toBottomOf="@+id/spawn_tag" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/imagesRecycler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/actorstext" />
+            <TextView
+                android:id="@+id/egg_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/spawn_time"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_round_access_time_24"
+                app:drawableTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/spawn_text"
+                app:layout_constraintStart_toStartOf="@id/spawn_text"
+                app:layout_constraintTop_toBottomOf="@+id/spawn_text" />
+
+            <TextView
+                android:id="@+id/egg_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Test"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/egg_tag"
+                app:layout_constraintStart_toStartOf="@id/egg_tag"
+                app:layout_constraintTop_toBottomOf="@+id/egg_tag" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
