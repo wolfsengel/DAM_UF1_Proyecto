@@ -72,7 +72,7 @@
                     android:src="@drawable/ic_round_arrow_back_24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/white" />
+                    app:tint="@color/wheat" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,7 +93,7 @@
                     android:maxLines="2"
                     android:text="TITULO"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/wheat"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -119,9 +119,9 @@
                         android:drawablePadding="5dp"
                         android:gravity="center_vertical"
                         android:text="0"
-                        android:textColor="@color/white"
+                        android:textColor="@color/wheat"
                         app:drawableStartCompat="@drawable/ic_round_star_24"
-                        app:drawableTint="@color/white" />
+                        app:drawableTint="@color/wheat" />
 
                     <TextView
                         android:id="@+id/pokeHeight"
@@ -131,9 +131,9 @@
                         android:drawablePadding="5dp"
                         android:gravity="center_vertical"
                         android:text="0"
-                        android:textColor="@color/white"
+                        android:textColor="@color/wheat"
                         app:drawableStartCompat="@drawable/height"
-                        app:drawableTint="@color/white" />
+                        app:drawableTint="@color/wheat" />
 
                     <TextView
                         android:id="@+id/pokeWeight"
@@ -143,9 +143,9 @@
                         android:gravity="center_vertical"
                         android:text="0"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/white"
+                        android:textColor="@color/wheat"
                         app:drawableStartCompat="@drawable/ic_weight"
-                        app:drawableTint="@color/white"
+                        app:drawableTint="@color/wheat"
                         tools:ignore="RtlCompat" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -158,10 +158,10 @@
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
                 android:text="@string/type"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="16sp"
                 app:drawableStartCompat="@drawable/ic_kind_pok"
-                app:drawableTint="@color/white"
+                app:drawableTint="@color/wheat"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Test"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/typetag"
                 app:layout_constraintStart_toStartOf="@id/typetag"
@@ -183,13 +183,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_avg_time"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
                 android:text="@string/avg_spawn"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="16sp"
-                app:drawableStartCompat="@drawable/ic_round_access_time_24"
-                app:drawableTint="@color/white"
+                app:drawableTint="@color/wheat"
                 app:layout_constraintEnd_toEndOf="@id/typetext"
                 app:layout_constraintStart_toStartOf="@id/typetext"
                 app:layout_constraintTop_toBottomOf="@+id/typetext" />
@@ -200,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Test"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/spawn_tag"
                 app:layout_constraintStart_toStartOf="@id/spawn_tag"
@@ -214,10 +214,10 @@
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
                 android:text="@string/spawn_time"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="16sp"
                 app:drawableStartCompat="@drawable/ic_round_access_time_24"
-                app:drawableTint="@color/white"
+                app:drawableTint="@color/wheat"
                 app:layout_constraintEnd_toEndOf="@id/spawn_text"
                 app:layout_constraintStart_toStartOf="@id/spawn_text"
                 app:layout_constraintTop_toBottomOf="@+id/spawn_text" />
@@ -228,7 +228,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Test"
-                android:textColor="@color/white"
+                android:textColor="@color/wheat"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/egg_tag"
                 app:layout_constraintStart_toStartOf="@id/egg_tag"
