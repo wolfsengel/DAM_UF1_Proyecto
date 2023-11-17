@@ -34,13 +34,19 @@ class PokemonListAdapter(internal var context: Context, internal var pokemonList
             val intent = Intent(context, DetailActivity::class.java)
 
             intent.putExtra("pokemonName", clickedPokemon.name)
-            intent.putExtra("pokemonId", clickedPokemon.id)
+            intent.putExtra("pokemonId", clickedPokemon.id.toString())
             intent.putExtra("pokemonHeight", clickedPokemon.height)
             intent.putExtra("pokemonWeight", clickedPokemon.weight)
             intent.putExtra("pokemonType", clickedPokemon.type.toString())
             intent.putExtra("pokemonImage", clickedPokemon.img)
             intent.putExtra("pokemonWeaknesses", clickedPokemon.weaknesses.toString())
-            intent.putExtra("pokemonSpawnChance", clickedPokemon.spawnChance)
+            intent.putExtra("pokemonSpawnChance", clickedPokemon.spawnChance.toString())
+            intent.putExtra("pokemonAvgSpawns", clickedPokemon.avgSpawns.toString())
+            intent.putExtra("pokemonSpawnTime", clickedPokemon.spawnTime)
+            intent.putExtra("pokemonCandy", clickedPokemon.candy)
+            intent.putExtra("pokemonCandyCount", clickedPokemon.candyCount.toString())
+            intent.putExtra("pokemonEgg", clickedPokemon.egg)
+
 
             context.startActivity(intent)
         }

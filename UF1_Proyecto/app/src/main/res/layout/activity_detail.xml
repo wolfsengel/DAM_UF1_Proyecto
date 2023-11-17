@@ -207,7 +207,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/spawn_tag" />
 
             <TextView
-                android:id="@+id/avgspawn_tag"
+                android:id="@+id/spawnchance_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_chancespawn"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/spawn_chance"
+                android:textColor="@color/wheat"
+                android:textSize="16sp"
+                app:drawableTint="@color/wheat"
+                app:layout_constraintEnd_toEndOf="@id/spawn_text"
+                app:layout_constraintStart_toStartOf="@id/spawn_text"
+                app:layout_constraintTop_toBottomOf="@+id/spawn_text" />
+
+            <TextView
+                android:id="@+id/spawnchance_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Test"
+                android:textColor="@color/wheat"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/spawnchance_tag"
+                app:layout_constraintStart_toStartOf="@id/spawnchance_tag"
+                app:layout_constraintTop_toBottomOf="@+id/spawnchance_tag" />
+
+            <TextView
+                android:id="@+id/timespawn_tag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -218,21 +246,21 @@
                 android:textSize="16sp"
                 app:drawableStartCompat="@drawable/ic_round_access_time_24"
                 app:drawableTint="@color/wheat"
-                app:layout_constraintEnd_toEndOf="@id/spawn_text"
-                app:layout_constraintStart_toStartOf="@id/spawn_text"
-                app:layout_constraintTop_toBottomOf="@+id/spawn_text" />
+                app:layout_constraintEnd_toEndOf="@id/spawnchance_text"
+                app:layout_constraintStart_toStartOf="@id/spawnchance_text"
+                app:layout_constraintTop_toBottomOf="@+id/spawnchance_text" />
 
             <TextView
-                android:id="@+id/avgspawn_text"
+                android:id="@+id/timespawn_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Test"
                 android:textColor="@color/wheat"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/avgspawn_tag"
-                app:layout_constraintStart_toStartOf="@id/avgspawn_tag"
-                app:layout_constraintTop_toBottomOf="@+id/avgspawn_tag" />
+                app:layout_constraintEnd_toEndOf="@id/timespawn_tag"
+                app:layout_constraintStart_toStartOf="@id/timespawn_tag"
+                app:layout_constraintTop_toBottomOf="@+id/timespawn_tag" />
 
             <TextView
                 android:id="@+id/egg_tag"
@@ -246,9 +274,9 @@
                 android:textColor="@color/wheat"
                 android:textSize="16sp"
                 app:drawableTint="@color/wheat"
-                app:layout_constraintEnd_toEndOf="@id/avgspawn_text"
-                app:layout_constraintStart_toStartOf="@id/avgspawn_text"
-                app:layout_constraintTop_toBottomOf="@+id/avgspawn_text" />
+                app:layout_constraintEnd_toEndOf="@id/timespawn_text"
+                app:layout_constraintStart_toStartOf="@id/timespawn_text"
+                app:layout_constraintTop_toBottomOf="@+id/timespawn_text" />
 
             <TextView
                 android:id="@+id/egg_text"
@@ -263,23 +291,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/egg_tag" />
 
             <TextView
-                android:id="@+id/eggcount_tag"
+                android:id="@+id/candy_tag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
-                android:text="@string/egg_count"
+                android:text="@string/candy"
                 android:textColor="@color/wheat"
                 android:textSize="16sp"
-                app:drawableStartCompat="@drawable/ic_egg_count"
+                app:drawableStartCompat="@drawable/ic_candy"
                 app:drawableTint="@color/wheat"
                 app:layout_constraintEnd_toEndOf="@id/egg_text"
                 app:layout_constraintStart_toStartOf="@id/egg_text"
                 app:layout_constraintTop_toBottomOf="@+id/egg_text" />
 
             <TextView
-                android:id="@+id/eggcount_text"
+                android:id="@+id/candy_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -287,8 +315,36 @@
                 android:textColor="@color/wheat"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/egg_tag"
-                app:layout_constraintStart_toStartOf="@id/eggcount_tag"
-                app:layout_constraintTop_toBottomOf="@+id/eggcount_tag" />
+                app:layout_constraintStart_toStartOf="@id/candy_tag"
+                app:layout_constraintTop_toBottomOf="@+id/candy_tag" />
+
+            <TextView
+                android:id="@+id/candycount_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/candy_count"
+                android:textColor="@color/wheat"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_candyneed"
+                app:drawableTint="@color/wheat"
+                app:layout_constraintEnd_toEndOf="@id/candy_text"
+                app:layout_constraintStart_toStartOf="@id/candy_text"
+                app:layout_constraintTop_toBottomOf="@+id/candy_text" />
+
+            <TextView
+                android:id="@+id/candycount_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Test"
+                android:textColor="@color/wheat"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/egg_tag"
+                app:layout_constraintStart_toStartOf="@id/candycount_tag"
+                app:layout_constraintTop_toBottomOf="@+id/candycount_tag" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
