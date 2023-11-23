@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "152608187692",
+    "project_id": "uf1-proyecto-efa4a",
+    "storage_bucket": "uf1-proyecto-efa4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152608187692:android:265f922d2e12856deef889",
+        "android_client_info": {
+          "package_name": "com.example.uf1_proyecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt3qx1taagV_4HdFSdEn8DGva-IwRpaY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
