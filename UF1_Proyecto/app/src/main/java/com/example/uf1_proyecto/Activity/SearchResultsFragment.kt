@@ -36,8 +36,7 @@ class SearchResultsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search_results, container, false)
 
-        busca = arguments?.getString("busqueda").toString()
-
+        busca = if(arguments?.isEmpty() == true) "Error" else arguments?.getString("busqueda").toString()
         initView(view)
         sendRequest()
 
