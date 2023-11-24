@@ -43,12 +43,12 @@
             <ImageView
                 android:id="@+id/catalogo"
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:layout_margin="10dp"
                 android:layout_weight="0.2"
                 android:background="?android:attr/selectableItemBackground"
-                android:src="@drawable/btn_3"
+                android:src="@drawable/ic_guessgame"
                 app:tint="@color/wheat" />
 
             <ImageView
