@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,14 +20,18 @@ import com.example.uf1_proyecto.Adapter.PokemonListAdapter
 import com.example.uf1_proyecto.Domain.PokeItemK
 import com.example.uf1_proyecto.R
 import com.google.gson.Gson
+import java.lang.StringBuilder
 
 class RecommendationsFragment : Fragment() {
+    val sb = StringBuilder()
 
     private lateinit var adapterPrimGen: PokemonListAdapter
     private lateinit var recyclerViewPrimGen: RecyclerView
 
     private lateinit var searchBtn: Button
     private lateinit var buscardor: EditText
+
+    private lateinit var titleF: TextView
 
     private lateinit var mRequestQueue: RequestQueue
 
@@ -57,6 +60,27 @@ class RecommendationsFragment : Fragment() {
         )
         mRequestQueue.add(mStringRequest)
     }
+    private fun sendRequest2(potato:String) {
+        mRequestQueue = Volley.newRequestQueue(requireContext())
+
+        loading1.visibility = View.VISIBLE
+        val mStringRequest = StringRequest(
+            Request.Method.GET, "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json",
+            { response ->
+                val gson = Gson()
+                loading1.visibility = View.GONE
+                val items: PokeItemK = gson.fromJson(response, PokeItemK::class.java)
+                val itemsFiltered: PokeItemK = items
+                itemsFiltered.pokemon = items.pokemon!!.filter { it.name?.uppercase()!!.contains(potato.uppercase())}
+                adapterPrimGen = PokemonListAdapter(requireContext(),itemsFiltered)
+                recyclerViewPrimGen.adapter = adapterPrimGen
+            },
+            { error ->
+                loading1.visibility = View.GONE
+            }
+        )
+        mRequestQueue.add(mStringRequest)
+    }
 
 
 
@@ -65,13 +89,17 @@ class RecommendationsFragment : Fragment() {
         recyclerViewPrimGen.layoutManager = GridLayoutManager(requireContext(),3, LinearLayoutManager.VERTICAL, false)
         loading1 = view.findViewById(R.id.loading)
         searchBtn = view.findViewById(R.id.searchBtn)
+        buscardor = view.findViewById(R.id.search_bar)
+        titleF = view.findViewById(R.id.estrenos_movies)
 
         searchBtn.setOnClickListener {
-            val navigator: NavController = findNavController()
-            val bundle = Bundle()
-            buscardor = view.findViewById(R.id.search_bar)
-            bundle.putString("search", buscardor.text.toString())
-            navigator.navigate(R.id.searchFragment, bundle)
+
+            sb.append("\"")
+            sb.append(buscardor.text.toString())
+            sb.append("\"")
+            val text:String = sb.toString()
+            titleF.text = text
+            sendRequest2(buscardor.text.toString())
         }
 
     }
