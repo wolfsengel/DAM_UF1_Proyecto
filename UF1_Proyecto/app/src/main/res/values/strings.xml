@@ -32,6 +32,13 @@
     <string name="no_results_subtitle">Prueba a buscar otra cosa</string>
     <string name="posible_results">Quizás te guste también</string>
 
+    <string name="guessgame">¿Qué Pokemon es?</string>
+    <string name="guessgame_subtitle">Adivina el Pokemon</string>
+    <string name="guessgame_correct">¡Correcto!</string>
+    <string name="guessgame_incorrect">¡Incorrecto!</string>
+    <string name="guessgame_button">¡Adivinar!</string>
+    <string name="hint">Pista</string>
+
     <!-- Pokemon -->
     <string name="type">Tipo</string>
     <string name="avg_spawn">Media de aparición</string>

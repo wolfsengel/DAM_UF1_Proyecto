@@ -36,7 +36,7 @@ class CatalogFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_catalog, container, false)
+        val view = inflater.inflate(R.layout.fragment_guessgame, container, false)
         initView(view)
         sendRequest1()
         return view
