@@ -67,6 +67,7 @@ class GuessGameFragment : Fragment() {
     }
 
     private fun initView(view: View) {
+        var revealed:Boolean=false
         guess_txt = view.findViewById(R.id.guess_txt)
         guess_btn = view.findViewById(R.id.guess_btn)
         reveal_btn = view.findViewById(R.id.reveal_btn)
@@ -82,19 +83,31 @@ class GuessGameFragment : Fragment() {
             sendRequest1(random)
         }
         guess_btn.setOnClickListener {
+            if (revealed) {
+                Toast.makeText(requireContext(), "You already revealed the answer!", Toast.LENGTH_SHORT).show()
+                guesspk_txt.visibility = View.INVISIBLE
+                val random = (1..151).random()
+                sendRequest1(random)
+            }
             if (guess_txt.text.toString().uppercase() == guesspk_txt.text.toString().uppercase()) {
                 Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
                 guess_txt.setText("")
                 guesspk_txt.visibility = View.VISIBLE
+                removeSilhouetteEffect(pk_img)
             }
         }
         reveal_btn.setOnClickListener {
+            revealed=true
+            removeSilhouetteEffect(pk_img)
             guesspk_txt.visibility = View.VISIBLE
         }
 
     }
     private fun applySilhouetteEffect(imageView: ImageView) {
         imageView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN)
+    }
+    private fun removeSilhouetteEffect(imageView: ImageView) {
+        imageView.clearColorFilter()
     }
 
 

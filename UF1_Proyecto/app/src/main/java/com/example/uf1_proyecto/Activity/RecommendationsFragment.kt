@@ -20,7 +20,6 @@ import com.example.uf1_proyecto.Adapter.PokemonListAdapter
 import com.example.uf1_proyecto.Domain.PokeItemK
 import com.example.uf1_proyecto.R
 import com.google.gson.Gson
-import java.lang.StringBuilder
 
 class RecommendationsFragment : Fragment() {
     val sb = StringBuilder()
@@ -93,7 +92,7 @@ class RecommendationsFragment : Fragment() {
         titleF = view.findViewById(R.id.estrenos_movies)
 
         searchBtn.setOnClickListener {
-
+            titleF.text = ""
             sb.append("\"")
             sb.append(buscardor.text.toString())
             sb.append("\"")
