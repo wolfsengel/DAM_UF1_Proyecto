@@ -40,12 +40,11 @@
     <string name="hint">Pista</string>
     <string name="gamedescription">En un juego de adivinar Pokémon por siluetas, los jugadores se
         enfrentan a imágenes que muestran solo las siluetas de los Pokémon, sin detalles visibles.
-        El objetivo es adivinar el nombre del Pokémon correspondiente basándose únicamente en su
+        Cada vez que aciertas un Pokémon, ganas 1 punto. Si usas la opción "revelar identidad",
+        pierdes 1 punto. El objetivo es adivinar el nombre del Pokémon correspondiente basándose únicamente en su
         contorno. Los participantes utilizan su conocimiento de la franquicia Pokémon y su habilidad
         para identificar las formas características de los Pokémon para deducir correctamente de qué
-        criatura se trata. El juego puede presentar diferentes niveles de dificultad, consiluetas
-        más detalladas o abstractas según el nivel, proporcionando así un desafío entretenido para
-        los aficionados a Pokémon.</string>
+        criatura se trata.</string>
 
     <!-- Pokemon -->
     <string name="type">Tipo</string>

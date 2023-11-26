@@ -27,7 +27,10 @@ class GuessGameFragment : Fragment() {
     private lateinit var reveal_btn: Button
     private lateinit var refresh_btn: Button
     private lateinit var guesspk_txt: TextView
+    private lateinit var new_btn: Button
     private lateinit var pk_img: ImageView
+    private lateinit var highscore_txt: TextView
+    private lateinit var currentscore_txt: TextView
 
     private lateinit var mRequestQueue: RequestQueue
 
@@ -67,13 +70,18 @@ class GuessGameFragment : Fragment() {
     }
 
     private fun initView(view: View) {
-        var revealed:Boolean=false
+        var score = 0
+        var revealed = false
+        var correct = false
         guess_txt = view.findViewById(R.id.guess_txt)
         guess_btn = view.findViewById(R.id.guess_btn)
         reveal_btn = view.findViewById(R.id.reveal_btn)
         refresh_btn = view.findViewById(R.id.refresh_btn)
-        guesspk_txt = view.findViewById(R.id.secret_pk)
+        guesspk_txt = view.findViewById(R.id.secretpk)
+        new_btn = view.findViewById(R.id.newone_btn)
         pk_img = view.findViewById(R.id.secret_pk_img)
+        highscore_txt = view.findViewById(R.id.highscore)
+        currentscore_txt = view.findViewById(R.id.current_user_score)
         guesspk_txt.visibility = View.INVISIBLE
         val random = (1..151).random()
         sendRequest1(random)
@@ -81,6 +89,10 @@ class GuessGameFragment : Fragment() {
             guesspk_txt.visibility = View.INVISIBLE
             val random = (1..151).random()
             sendRequest1(random)
+            if (score>0) {
+                score--
+                currentscore_txt.text = score.toString()
+            }
         }
         guess_btn.setOnClickListener {
             if (revealed) {
@@ -88,9 +100,16 @@ class GuessGameFragment : Fragment() {
                 guesspk_txt.visibility = View.INVISIBLE
                 val random = (1..151).random()
                 sendRequest1(random)
+                revealed=false
+                score++
+                currentscore_txt.text = score.toString()
+                if (score > highscore_txt.text.toString().toInt()) {
+                    highscore_txt.text = score.toString()
+                }
             }
             if (guess_txt.text.toString().uppercase() == guesspk_txt.text.toString().uppercase()) {
                 Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
+                correct = true
                 guess_txt.setText("")
                 guesspk_txt.visibility = View.VISIBLE
                 removeSilhouetteEffect(pk_img)
@@ -100,6 +119,16 @@ class GuessGameFragment : Fragment() {
             revealed=true
             removeSilhouetteEffect(pk_img)
             guesspk_txt.visibility = View.VISIBLE
+            if (score>0) {
+                score--
+                currentscore_txt.text = score.toString()
+            }
+        }
+        new_btn.setOnClickListener {
+            correct = false
+            guesspk_txt.visibility = View.INVISIBLE
+            val random = (1..151).random()
+            sendRequest1(random)
         }
 
     }
