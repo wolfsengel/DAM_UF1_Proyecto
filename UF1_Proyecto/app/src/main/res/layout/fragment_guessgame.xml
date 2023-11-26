@@ -42,7 +42,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/secret_pk_img"
                         android:layout_width="300dp"
                         android:layout_height="300dp"
                         android:layout_marginTop="50dp"
@@ -51,21 +51,21 @@
                         app:layout_constraintTop_toBottomOf="@+id/game_title" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/secret_pk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:textColor="@color/wheat"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/editTextText"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintBottom_toTopOf="@+id/guess_txt"
+                        app:layout_constraintEnd_toEndOf="@+id/secret_pk_img"
                         app:layout_constraintHorizontal_bias="0.495"
-                        app:layout_constraintStart_toStartOf="@+id/imageView"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                        app:layout_constraintStart_toStartOf="@+id/secret_pk_img"
+                        app:layout_constraintTop_toBottomOf="@+id/secret_pk_img" />
 
                     <EditText
-                        android:id="@+id/editTextText"
+                        android:id="@+id/guess_txt"
                         android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="12dp"
@@ -82,10 +82,10 @@
                         android:textColorHint="@color/wheat"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                        app:layout_constraintTop_toBottomOf="@+id/secret_pk" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button"
+                        android:id="@+id/guess_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/btn_background"
@@ -93,23 +93,53 @@
                         android:textColor="@color/wood"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/editTextText"
-                        app:layout_constraintTop_toTopOf="@+id/editTextText"
+                        app:layout_constraintStart_toEndOf="@+id/guess_txt"
+                        app:layout_constraintTop_toTopOf="@+id/guess_txt"
                         app:layout_constraintVertical_bias="0.0" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button2"
+                        android:id="@+id/reveal_btn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
                         android:background="@drawable/btn_hint"
                         android:textColor="@color/cardview_dark_background"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                        app:layout_constraintStart_toStartOf="@+id/guess_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/guess_txt" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/refresh_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/btn_refresh"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/reveal_btn"
+                        app:layout_constraintStart_toEndOf="@+id/reveal_btn"
+                        app:layout_constraintTop_toTopOf="@+id/reveal_btn" />
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/description_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="50dp"
+                    android:paddingBottom="50dp"
+                    android:text="@string/gamedescription"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/wood"
+                    tools:textStyle="italic" />
+
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

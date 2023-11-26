@@ -1,8 +1,8 @@
 package com.example.uf1_proyecto.Activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.example.uf1_proyecto.R
 
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<View>(R.id.catalogo).setOnClickListener {
-            navController.navigate(R.id.catalogFragment)
+            navController.navigate(R.id.guessGameFragment)
         }
 
         findViewById<View>(R.id.homeButton).setOnClickListener {

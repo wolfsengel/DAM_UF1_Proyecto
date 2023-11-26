@@ -13,8 +13,8 @@
             android:id="@+id/action_recommendationsFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
         <action
-            android:id="@+id/action_recommendationsFragment_to_catalogFragment"
-            app:destination="@id/catalogFragment" />
+            android:id="@+id/action_recommendationsFragment_to_guessGameFragment"
+            app:destination="@id/guessGameFragment" />
     </fragment>
 
     <fragment
@@ -25,13 +25,12 @@
             android:id="@+id/action_profileFragment_to_recommendationsFragment"
             app:destination="@id/recommendationsFragment" />
     </fragment>
-
     <fragment
-        android:id="@+id/catalogFragment"
-        android:name="com.example.uf1_proyecto.Activity.CatalogFragment"
-        android:label="CatalogFragment" >
+        android:id="@+id/guessGameFragment"
+        android:name="com.example.uf1_proyecto.Activity.GuessGameFragment"
+        android:label="GuessGameFragment" >
         <action
-            android:id="@+id/action_catalogFragment_to_recommendationsFragment"
+            android:id="@+id/action_guessGameFragment_to_recommendationsFragment"
             app:destination="@id/recommendationsFragment" />
     </fragment>
 
