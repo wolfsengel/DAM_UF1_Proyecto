@@ -44,7 +44,14 @@ class GuessGameFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_guessgame, container, false)
         initView(view)
+        loadUserData()
         return view
+    }
+
+    private fun loadUserData() {
+        val sharedPreferences = requireContext().getSharedPreferences("sharedPrefs", 0)
+        val highscore = sharedPreferences.getInt("HIGHSCORE", 0)
+        highscore_txt.text = highscore.toString()
     }
 
     private fun sendRequest1(random:Int) {
@@ -72,7 +79,6 @@ class GuessGameFragment : Fragment() {
     private fun initView(view: View) {
         var score = 0
         var revealed = false
-        var correct = false
         guess_txt = view.findViewById(R.id.guess_txt)
         guess_btn = view.findViewById(R.id.guess_btn)
         reveal_btn = view.findViewById(R.id.reveal_btn)
@@ -83,9 +89,13 @@ class GuessGameFragment : Fragment() {
         highscore_txt = view.findViewById(R.id.highscore)
         currentscore_txt = view.findViewById(R.id.current_user_score)
         guesspk_txt.visibility = View.INVISIBLE
+
         val random = (1..151).random()
         sendRequest1(random)
+
         refresh_btn.setOnClickListener {
+            revealed = false
+            guess_txt.setText("")
             guesspk_txt.visibility = View.INVISIBLE
             val random = (1..151).random()
             sendRequest1(random)
@@ -94,6 +104,7 @@ class GuessGameFragment : Fragment() {
                 currentscore_txt.text = score.toString()
             }
         }
+
         guess_btn.setOnClickListener {
             if (revealed) {
                 Toast.makeText(requireContext(), "You already revealed the answer!", Toast.LENGTH_SHORT).show()
@@ -101,22 +112,36 @@ class GuessGameFragment : Fragment() {
                 val random = (1..151).random()
                 sendRequest1(random)
                 revealed=false
-                score++
-                currentscore_txt.text = score.toString()
-                if (score > highscore_txt.text.toString().toInt()) {
-                    highscore_txt.text = score.toString()
+                if (score>0) {
+                    score--
+                    currentscore_txt.text = score.toString()
                 }
+                currentscore_txt.text = score.toString()
+
             }
             if (guess_txt.text.toString().uppercase() == guesspk_txt.text.toString().uppercase()) {
                 Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
-                correct = true
+                revealed = false
                 guess_txt.setText("")
                 guesspk_txt.visibility = View.VISIBLE
                 removeSilhouetteEffect(pk_img)
+                score++
+                currentscore_txt.text = score.toString()
+                if (score>highscore_txt.text.toString().toInt()) {
+                    highscore_txt.text = score.toString()
+                    val sharedPreferences = requireContext().getSharedPreferences("sharedPrefs", 0)
+                    sharedPreferences.edit().putInt("HIGHSCORE", score)
+                }
+            } else {
+                Toast.makeText(requireContext(), "Incorrect!", Toast.LENGTH_SHORT).show()
+                revealed = false
+                guess_txt.setText("")
+                guesspk_txt.visibility = View.INVISIBLE
             }
         }
+
         reveal_btn.setOnClickListener {
-            revealed=true
+            revealed = false
             removeSilhouetteEffect(pk_img)
             guesspk_txt.visibility = View.VISIBLE
             if (score>0) {
@@ -124,8 +149,8 @@ class GuessGameFragment : Fragment() {
                 currentscore_txt.text = score.toString()
             }
         }
+
         new_btn.setOnClickListener {
-            correct = false
             guesspk_txt.visibility = View.INVISIBLE
             val random = (1..151).random()
             sendRequest1(random)
