@@ -19,6 +19,8 @@ import com.bumptech.glide.Glide
 import com.example.uf1_proyecto.Domain.PokeItemK
 import com.example.uf1_proyecto.R
 import com.google.gson.Gson
+import android.content.Context
+import android.content.SharedPreferences
 
 class GuessGameFragment : Fragment() {
 
@@ -90,6 +92,11 @@ class GuessGameFragment : Fragment() {
         val random = (1..151).random()
         sendRequest1(random)
 
+        val highscoreManager = HighscoreManager(this.requireContext())
+
+        val loadedHighscore = highscoreManager.loadHighscore()
+        highscore_txt.text = loadedHighscore.toString()
+
         refresh_btn.setOnClickListener {
             revealed = false
             guess_txt.setText("")
@@ -127,7 +134,7 @@ class GuessGameFragment : Fragment() {
                 if (score>highscore_txt.text.toString().toInt()) {
                     highscore_txt.text = score.toString()
                     highscore = score
-                    saveHighscore(highscore)
+                    highscoreManager.saveHighscore(highscore)
                 }
             } else {
                 Toast.makeText(requireContext(), "Incorrect!", Toast.LENGTH_SHORT).show()
@@ -155,8 +162,26 @@ class GuessGameFragment : Fragment() {
 
     }
 
+    inner class HighscoreManager(private val context: Context) {
+
+        private val sharedPreferences: SharedPreferences =
+            context.getSharedPreferences("HighscorePrefs", Context.MODE_PRIVATE)
+
+        fun saveHighscore(score: Int) {
+            val editor = sharedPreferences.edit()
+            editor.putInt("highscore", score)
+            editor.apply()
+        }
+
+        fun loadHighscore(): Int {
+            return sharedPreferences.getInt("highscore", 0)
+        }
+    }
+
+
 
     fun saveHighscore(score:Int) {
+        //shared preferences
 
     }
 
