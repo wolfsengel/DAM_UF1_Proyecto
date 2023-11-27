@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var registerButton: Button
     private lateinit var login_reload: TextView
     private lateinit var mAuth:FirebaseAuth
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         passwordTxt2 = findViewById(R.id.passwordR2)
         registerButton = findViewById(R.id.register_button_deltodo)
         login_reload = findViewById(R.id.reIniciaSesion)
+        progressBar = findViewById(R.id.progressBar2)
         mAuth = FirebaseAuth.getInstance()
 
         login_reload.setOnClickListener {
@@ -38,6 +41,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
         registerButton.setOnClickListener {
+            progressBar.visibility = ProgressBar.VISIBLE
             if (userTxt.text.toString().isEmpty() || passwordTxt.text.toString().isEmpty() || passwordTxt2.text.toString().isEmpty()) {
                 Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -52,14 +56,17 @@ class RegisterActivity : AppCompatActivity() {
                 mAuth.createUserWithEmailAndPassword(userTxt.text.toString(), passwordTxt.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        progressBar.visibility = ProgressBar.GONE
                         Toast.makeText(this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                     } else {
+                        progressBar.visibility = ProgressBar.GONE
                         Toast.makeText(this, "Error al crear el usuario", Toast.LENGTH_SHORT).show()
                     }
                 }
 
             } else {
+                progressBar.visibility = ProgressBar.GONE
                 Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }

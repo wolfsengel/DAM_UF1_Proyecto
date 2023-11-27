@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var registerButtonL: TextView
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var progressBar: ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -35,8 +36,10 @@ class LoginActivity : AppCompatActivity() {
         loginButton = findViewById(R.id.login_button)
         registerButtonL = findViewById(R.id.register_button)
         mAuth = FirebaseAuth.getInstance()
+        progressBar = findViewById(R.id.progressBar)
 
         loginButton.setOnClickListener {
+            progressBar.visibility = ProgressBar.VISIBLE
             if (userTxt.text.toString().isEmpty() || passwordTxt.text.toString().isEmpty()) {
                 Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -44,11 +47,13 @@ class LoginActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(userTxt.text.toString(), passwordTxt.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        progressBar.visibility = ProgressBar.GONE
                         val intent = Intent(this, MainActivity::class.java)
                         Toast.makeText(this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                         finish()
                     } else {
+                        progressBar.visibility = ProgressBar.GONE
                         Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
                     }
                 }
