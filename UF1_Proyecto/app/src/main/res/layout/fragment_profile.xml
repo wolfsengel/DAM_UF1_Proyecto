@@ -81,7 +81,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/usernametag"
-                        app:layout_constraintVertical_bias="0.25" />
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/logout_button"
@@ -95,6 +95,58 @@
                         app:layout_constraintEnd_toEndOf="@+id/erase_account_button"
                         app:layout_constraintStart_toStartOf="@+id/erase_account_button"
                         app:layout_constraintTop_toBottomOf="@+id/erase_account_button" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="25dp"
+                        android:paddingBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/logout_button">
+
+                        <ImageView
+                            android:id="@+id/spanish_flag"
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_spanish"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/galician_flag"
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            android:padding="5dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/spanish_flag"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/roundedImageRounded"
+                            android:src="@drawable/ic_gal_flag_modified" />
+
+                        <ImageView
+                            android:id="@+id/czech_flag"
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_czech"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/galician_flag"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/english_flag"
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_breargritain"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/czech_flag"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
