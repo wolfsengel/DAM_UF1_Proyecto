@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="intro_title">Pokedex Oficial</string>
+    <string name="intro_subtitle">Descubre os mellores Pokémons e as súas evolucións</string>
+    <string name="intro_button">Entrar</string>
+    <string name="login_title">Iniciar sesión</string>
+    <string name="UserName">Nome de usuario</string>
+    <string name="Password">Contrasinal</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="register_button">Rexistrarse</string>
+    <string name="register_title">Rexistrarse</string>
+    <string name="forgot_password">Esqueceches o contrasinal?</string>
+    <string name="not_registered">Non tes conta? Rexístrate aquí</string>
+    <string name="is_registered">Xa tes conta? Inicia sesión aquí</string>
+    <string name="main_title">Que Pokémon che apetece ver hoxe?</string>
+    <string name="search">Buscar…</string>
+    <string name="search_results">Resultados da busca</string>
+    <string name="search_no_results">Non se atoparon resultados</string>
+    <string name="New_options">Primeira xeración</string>
+    <string name="Popular_options">Máis populares</string>
+    <string name="Top_rated_options">Lendarios</string>
+    <string name="username">Nome de usuario:</string>
+    <string name="password">Contrasinal:</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="erase_account">Borrar conta</string>
+    <string name="profile">Perfil</string>
+    <string name="catalog_title">Compra de cartas</string>
+    <string name="cinesa">Santiago de Compostela</string>
+    <string name="yelmo">España</string>
+    <string name="paco">Global</string>
+    <string name="buscar">Buscar</string>
+    <string name="no_results_subtitle">Proba buscar outra cousa</string>
+    <string name="posible_results">Quizais tamén che guste</string>
+
+    <string name="guessgame">Qué Pokémon é?</string>
+    <string name="guessgame_subtitle">Adiviña o Pokémon</string>
+    <string name="guessgame_correct">Correcto!</string>
+    <string name="guessgame_incorrect">Incorrecto!</string>
+    <string name="guessgame_button">Adiviñar!</string>
+    <string name="hint">Pista</string>
+    <string name="gamedescription">Nun xogo de adiviñar Pokémon por siluetas, os xogadores enfróntanse a imaxes que mostran só as siluetas dos Pokémon, sen detalles visibles. Cada vez que acertas un Pokémon, gañas 1 punto. Se usas a opción "revelar identidade", perdes 1 punto. O obxectivo é adiviñar o nome do Pokémon correspondente baseándose únicamente no seu contorno. Os participantes usan o seu coñecemento da franquía Pokémon e a súa habilidade para identificar as formas características dos Pokémon para deducir correctamente de que criatura se trata.</string>
+
+    <!-- Pokemon -->
+    <string name="type">Tipo</string>
+    <string name="avg_spawn">Media de aparición</string>
+    <string name="spawn_time">Hora de aparición</string>
+    <string name="spawn_chance">Posibilidade de aparición</string>
+    <string name="egg">Tipo de ovo do Pokémon</string>
+    <string name="candy">Doces</string>
+    <string name="candy_count">Número de doces necesarios</string>
+    <string name="weaknesses">Debilidades</string>
+
+</resources>
