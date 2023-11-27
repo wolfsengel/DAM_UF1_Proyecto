@@ -12,7 +12,7 @@
     <string name="forgot_password">Forgot your password?</string>
     <string name="not_registered">Don\'t have an account? Register here</string>
     <string name="is_registered">Already have an account? Log in here</string>
-    <string name="main_title">Which Pokémon do you feel like seeing today?</string>
+    <string name="main_title">Which Pokemon do you feel like seeing today?</string>
     <string name="search">Search...</string>
     <string name="search_results">Search Results</string>
     <string name="search_no_results">No results found</string>
@@ -38,7 +38,12 @@
     <string name="guessgame_incorrect">Incorrect!</string>
     <string name="guessgame_button">Guess!</string>
     <string name="hint">Hint</string>
-    <string name="gamedescription">In a game of guessing Pokémon by silhouettes, players face images that show only the silhouettes of the Pokémon, without visible details. Each time you guess a Pokémon, you earn 1 point. If you use the "reveal identity" option, you lose 1 point. The goal is to guess the name of the corresponding Pokémon based solely on its outline. Participants use their knowledge of the Pokémon franchise and their ability to identify the characteristic shapes of Pokémon to correctly deduce which creature it is.</string>
+    <string name="gamedescription">In a game of guessing Pokémon by silhouettes, players face images
+        that show only the silhouettes of the Pokémon, without visible details. Each time you guess
+        a Pokémon, you earn 1 point. If you use the "reveal identity" option, you lose 1 point. The
+        goal is to guess the name of the corresponding Pokémon based solely on its outline.
+        Participants use their knowledge of the Pokémon franchise and their ability to identify the
+        characteristic shapes of Pokémon to correctly deduce which creature it is.</string>
 
     <!-- Pokemon -->
     <string name="type">Type</string>
