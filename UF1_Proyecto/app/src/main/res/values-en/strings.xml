@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="intro_title">Official Pokedex</string>
+    <string name="intro_subtitle">Discover the best Pokémon and their evolutions</string>
+    <string name="intro_button">Enter</string>
+    <string name="login_title">Log In</string>
+    <string name="UserName">Username</string>
+    <string name="Password">Password</string>
+    <string name="login_button">Log In</string>
+    <string name="register_button">Register</string>
+    <string name="register_title">Register</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="not_registered">Don\'t have an account? Register here</string>
+    <string name="is_registered">Already have an account? Log in here</string>
+    <string name="main_title">Which Pokémon do you feel like seeing today?</string>
+    <string name="search">Search...</string>
+    <string name="search_results">Search Results</string>
+    <string name="search_no_results">No results found</string>
+    <string name="New_options">First generation</string>
+    <string name="Popular_options">Most popular</string>
+    <string name="Top_rated_options">Legendary</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="logout">Log out</string>
+    <string name="erase_account">Erase account</string>
+    <string name="profile">Profile</string>
+    <string name="catalog_title">Card Purchase</string>
+    <string name="cinesa">Santiago de Compostela</string>
+    <string name="yelmo">Spain</string>
+    <string name="paco">Global</string>
+    <string name="buscar">Search</string>
+    <string name="no_results_subtitle">Try searching for something else</string>
+    <string name="posible_results">You might also like</string>
+
+    <string name="guessgame">Who\'s That Pokemon?</string>
+    <string name="guessgame_subtitle">Guess the Pokemon</string>
+    <string name="guessgame_correct">Correct!</string>
+    <string name="guessgame_incorrect">Incorrect!</string>
+    <string name="guessgame_button">Guess!</string>
+    <string name="hint">Hint</string>
+    <string name="gamedescription">In a game of guessing Pokémon by silhouettes, players face images that show only the silhouettes of the Pokémon, without visible details. Each time you guess a Pokémon, you earn 1 point. If you use the "reveal identity" option, you lose 1 point. The goal is to guess the name of the corresponding Pokémon based solely on its outline. Participants use their knowledge of the Pokémon franchise and their ability to identify the characteristic shapes of Pokémon to correctly deduce which creature it is.</string>
+
+    <!-- Pokemon -->
+    <string name="type">Type</string>
+    <string name="avg_spawn">Average Spawn</string>
+    <string name="spawn_time">Spawn Time</string>
+    <string name="spawn_chance">Spawn Chance</string>
+    <string name="egg">Pokemon Egg Type</string>
+    <string name="candy">Candy</string>
+    <string name="candy_count">Number of candies required</string>
+    <string name="weaknesses">Weaknesses</string>
+
+</resources>
