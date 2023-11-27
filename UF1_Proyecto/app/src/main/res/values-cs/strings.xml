@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="intro_title">Oficiální Pokedex</string>
+    <string name="intro_subtitle">Objevte nejlepší Pokémony a jejich evoluce</string>
+    <string name="intro_button">Vstoupit</string>
+    <string name="login_title">Přihlásit se</string>
+    <string name="UserName">Uživatelské jméno</string>
+    <string name="Password">Heslo</string>
+    <string name="login_button">Přihlásit se</string>
+    <string name="register_button">Registrovat</string>
+    <string name="register_title">Registrovat se</string>
+    <string name="forgot_password">Zapomněli jste heslo?</string>
+    <string name="not_registered">Nemáte účet? Zaregistrujte se zde</string>
+    <string name="is_registered">Máte již účet? Přihlaste se zde</string>
+    <string name="main_title">Kterého Pokémona byste dnes chtěli vidět?</string>
+    <string name="search">Hledat...</string>
+    <string name="search_results">Výsledky hledání</string>
+    <string name="search_no_results">Nebyly nalezeny žádné výsledky</string>
+    <string name="New_options">První generace</string>
+    <string name="Popular_options">Nejoblíbenější</string>
+    <string name="Top_rated_options">Legendární</string>
+    <string name="username">Uživatelské jméno:</string>
+    <string name="password">Heslo:</string>
+    <string name="logout">Odhlásit se</string>
+    <string name="erase_account">Vymazat účet</string>
+    <string name="profile">Profil</string>
+    <string name="catalog_title">Nákup karet</string>
+    <string name="cinesa">Santiago de Compostela</string>
+    <string name="yelmo">Španělsko</string>
+    <string name="paco">Celosvětově</string>
+    <string name="buscar">Hledat</string>
+    <string name="no_results_subtitle">Zkuste hledat něco jiného</string>
+    <string name="posible_results">Možná se vám také líbí</string>
+
+    <string name="guessgame">Kdo je ten Pokémon?</string>
+    <string name="guessgame_subtitle">Uhodněte Pokémona</string>
+    <string name="guessgame_correct">Správně!</string>
+    <string name="guessgame_incorrect">Nesprávně!</string>
+    <string name="guessgame_button">Uhodnout!</string>
+    <string name="hint">Nápověda</string>
+    <string name="gamedescription">V hře na uhodnutí Pokémona podle siluet se hráči setkávají s obrázky, které ukazují pouze siluety Pokémonů, bez viditelných detailů. Pokaždé, když uhodnete Pokémona, získáte 1 bod. Pokud použijete možnost "odhalit totožnost", ztratíte 1 bod. Cílem je uhodnout název odpovídajícího Pokémona pouze na základě jeho obrysu. Účastníci využívají své znalosti franšízy Pokémon a schopnost identifikovat charakteristické tvary Pokémonů k tomu, aby správně odhadli, o jakou bytost se jedná.</string>
+
+    <!-- Pokemon -->
+    <string name="type">Typ</string>
+    <string name="avg_spawn">Průměrná spawn</string>
+    <string name="spawn_time">Čas spawn</string>
+    <string name="spawn_chance">Šance na spawn</string>
+    <string name="egg">Typ vajíčka Pokémona</string>
+    <string name="candy">Cukroví</string>
+    <string name="candy_count">Počet potřebných cukroví</string>
+    <string name="weaknesses">Slabiny</string>
+
+</resources>
