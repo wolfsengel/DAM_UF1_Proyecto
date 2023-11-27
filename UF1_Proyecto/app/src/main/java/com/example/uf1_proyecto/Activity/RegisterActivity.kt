@@ -35,19 +35,19 @@ class RegisterActivity : AppCompatActivity() {
         login_reload = findViewById(R.id.reIniciaSesion)
         progressBar = findViewById(R.id.progressBar2)
         mAuth = FirebaseAuth.getInstance()
-
+progressBar.visibility = ProgressBar.GONE
         login_reload.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
         registerButton.setOnClickListener {
-            progressBar.visibility = ProgressBar.VISIBLE
             if (userTxt.text.toString().isEmpty() || passwordTxt.text.toString().isEmpty() || passwordTxt2.text.toString().isEmpty()) {
                 Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             if (passwordTxt.text.toString() == passwordTxt2.text.toString()) {
 
+                progressBar.visibility = ProgressBar.VISIBLE
                 val intent = Intent(this, LoginActivity::class.java)
 
                 intent.putExtra("username", userTxt.text.toString())
