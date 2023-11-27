@@ -51,6 +51,10 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(requireContext(), "Borrado", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
             }
+            alertDialog.setNegativeButton("No") { _, _ ->
+                Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
+            }
+            alertDialog.show()
         }
         cerrarSesionBtn.setOnClickListener {
             val alertDialog: android.app.AlertDialog.Builder = android.app.AlertDialog.Builder(requireContext())
@@ -61,6 +65,10 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(requireContext(), "Cerrando sesión", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
             }
+            alertDialog.setNegativeButton("No") { _, _ ->
+                Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
+            }
+            alertDialog.show()
         }
     }
 
