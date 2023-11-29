@@ -73,15 +73,14 @@
                         android:id="@+id/erase_account_button"
                         android:layout_width="300dp"
                         android:layout_height="50dp"
+                        android:layout_marginTop="25dp"
                         android:background="@drawable/btn_background"
                         android:text="@string/erase_account"
                         android:textColor="@color/red"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/usernametag"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintTop_toBottomOf="@+id/usernametag" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/logout_button"
@@ -99,6 +98,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
                         android:paddingTop="25dp"
                         android:paddingBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,11 +122,11 @@
                             android:padding="5dp"
                             android:paddingStart="12dp"
                             android:paddingEnd="12dp"
+                            android:src="@drawable/ic_gal_flag_modified"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/spanish_flag"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:shapeAppearanceOverlay="@style/roundedImageRounded"
-                            android:src="@drawable/ic_gal_flag_modified" />
+                            app:shapeAppearanceOverlay="@style/roundedImageRounded" />
 
                         <ImageView
                             android:id="@+id/czech_flag"
