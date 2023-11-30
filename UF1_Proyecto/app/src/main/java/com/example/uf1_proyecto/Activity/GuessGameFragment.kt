@@ -111,7 +111,7 @@ class GuessGameFragment : Fragment() {
 
         guess_btn.setOnClickListener {
             if (revealed) {
-                Toast.makeText(requireContext(), "Already revealed!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.alreadyreveal) , Toast.LENGTH_SHORT).show()
                 guesspk_txt.visibility = View.INVISIBLE
                 val random = (1..151).random()
                 sendRequest1(random)
@@ -124,7 +124,7 @@ class GuessGameFragment : Fragment() {
 
             }
             if (guess_txt.text.toString().uppercase() == guesspk_txt.text.toString().uppercase()) {
-                Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.correct), Toast.LENGTH_SHORT).show()
                 revealed = false
                 guess_txt.setText("")
                 guesspk_txt.visibility = View.VISIBLE
@@ -137,7 +137,7 @@ class GuessGameFragment : Fragment() {
                     highscoreManager.saveHighscore(highscore)
                 }
             } else {
-                Toast.makeText(requireContext(), "Incorrect!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.incorrect), Toast.LENGTH_SHORT).show()
                 revealed = false
                 guess_txt.setText("")
                 guesspk_txt.visibility = View.INVISIBLE

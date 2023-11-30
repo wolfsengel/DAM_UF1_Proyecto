@@ -79,32 +79,29 @@ class ProfileFragment : Fragment() {
     private fun mostrarDialogo(cual:Int) {
         val builder = AlertDialog.Builder(requireContext())
         if (cual == 0) {
-            builder.setTitle("Cerrar Sesión")
-            builder.setMessage("¿Estás seguro de que deseas cerrar sesión?")
+            builder.setTitle(getString(R.string.signoutacc))
+            builder.setMessage(getString(R.string.signoutaccquestion))
         } else {
-            builder.setTitle("Borrar Cuenta")
-            builder.setMessage("¿Estás seguro de que deseas borrar tu cuenta?")
+            builder.setTitle(getString(R.string.deleteacc))
+            builder.setMessage(getString(R.string.deleteaccquestion))
         }
-        builder.setPositiveButton("Sí") { dialog, _ ->
+        builder.setPositiveButton(getString(R.string.yes)) { dialog, _ ->
             if (cual == 1) {
                 FirebaseAuth.getInstance().currentUser!!.delete()
             } else if (cual == 0) {
                 FirebaseAuth.getInstance().signOut()
             }
 
-
-            // Redirigir a la actividad de inicio (o la actividad intro en tu caso)
             val intent = Intent(requireContext(), IntroActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
 
-            // Limpiar la pila de actividades
             requireActivity().finishAffinity()
 
             dialog.dismiss()
         }
 
-        builder.setNegativeButton("No") { dialog, _ ->
+        builder.setNegativeButton(getString(R.string.no)) { dialog, _ ->
             dialog.dismiss()
         }
 

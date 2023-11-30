@@ -42,7 +42,7 @@ progressBar.visibility = ProgressBar.GONE
         }
         registerButton.setOnClickListener {
             if (userTxt.text.toString().isEmpty() || passwordTxt.text.toString().isEmpty() || passwordTxt2.text.toString().isEmpty()) {
-                Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.noemptyspaces), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             if (passwordTxt.text.toString() == passwordTxt2.text.toString()) {
@@ -57,17 +57,17 @@ progressBar.visibility = ProgressBar.GONE
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         progressBar.visibility = ProgressBar.GONE
-                        Toast.makeText(this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.correctregister), Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                     } else {
                         progressBar.visibility = ProgressBar.GONE
-                        Toast.makeText(this, "Error al crear el usuario", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.incorrectregister), Toast.LENGTH_SHORT).show()
                     }
                 }
 
             } else {
                 progressBar.visibility = ProgressBar.GONE
-                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.passwordconflict), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 

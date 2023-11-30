@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             progressBar.visibility = ProgressBar.VISIBLE
             if (userTxt.text.toString().isEmpty() || passwordTxt.text.toString().isEmpty()) {
-                Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.noemptyspaces), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             mAuth.signInWithEmailAndPassword(userTxt.text.toString(), passwordTxt.text.toString())
@@ -49,12 +49,12 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         progressBar.visibility = ProgressBar.GONE
                         val intent = Intent(this, MainActivity::class.java)
-                        Toast.makeText(this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.correctlogin), Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                         finish()
                     } else {
                         progressBar.visibility = ProgressBar.GONE
-                        Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.incorrectlogin), Toast.LENGTH_SHORT).show()
                     }
                 }
 
