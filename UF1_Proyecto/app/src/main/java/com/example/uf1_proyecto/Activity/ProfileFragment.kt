@@ -1,6 +1,8 @@
 package com.example.uf1_proyecto.Activity
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +11,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
 import com.example.uf1_proyecto.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import java.util.Locale
 
 class ProfileFragment : Fragment() {
     private lateinit var borrarBtn: Button
@@ -50,91 +55,74 @@ class ProfileFragment : Fragment() {
         user = Auth.currentUser!!
         nombreUsuarioP.text = user.email
 
-        val intent = Intent(requireContext(), IntroActivity::class.java)
+        cerrarSesionBtn.setOnClickListener {
+            mostrarDialogo(0)
+        }
 
         borrarBtn.setOnClickListener {
-            val alertDialog: android.app.AlertDialog.Builder =
-                android.app.AlertDialog.Builder(requireContext())
-            alertDialog.setTitle("Borrar cuenta")
-            alertDialog.setMessage("¿Estás seguro de que quieres borrar tu cuenta?")
-            alertDialog.setPositiveButton("Sí") { _, _ ->
+            mostrarDialogo(1)
+        }
+        gal_language.setOnClickListener {
+            onButtonLanguageClick("gl")
+        }
+        sp_language.setOnClickListener {
+            onButtonLanguageClick("es")
+        }
+        cz_language.setOnClickListener {
+            onButtonLanguageClick("cs")
+        }
+        en_language.setOnClickListener {
+            onButtonLanguageClick("en")
+        }
+    }
+
+    private fun mostrarDialogo(cual:Int) {
+        val builder = AlertDialog.Builder(requireContext())
+        if (cual == 0) {
+            builder.setTitle("Cerrar Sesión")
+            builder.setMessage("¿Estás seguro de que deseas cerrar sesión?")
+        } else {
+            builder.setTitle("Borrar Cuenta")
+            builder.setMessage("¿Estás seguro de que deseas borrar tu cuenta?")
+        }
+        builder.setPositiveButton("Sí") { dialog, _ ->
+            if (cual == 1) {
                 FirebaseAuth.getInstance().currentUser!!.delete()
-                Toast.makeText(requireContext(), "Borrado", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
-            }
-            alertDialog.setNegativeButton("No") { _, _ ->
-                Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
-            }
-            alertDialog.show()
-        }
-        cerrarSesionBtn.setOnClickListener {
-            val alertDialog: android.app.AlertDialog.Builder =
-                android.app.AlertDialog.Builder(requireContext())
-            alertDialog.setTitle("Cerrar sesión")
-            alertDialog.setMessage("¿Estás seguro de que quieres cerrar sesión?")
-            alertDialog.setPositiveButton("Sí") { _, _ ->
+            } else if (cual == 0) {
                 FirebaseAuth.getInstance().signOut()
-                Toast.makeText(requireContext(), "Cerrando sesión", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
-
-                alertDialog.setNegativeButton("No") { _, _ ->
-                    Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.show()
             }
 
-            gal_language.setOnClickListener {
-                val alertDialog: android.app.AlertDialog.Builder =
-                    android.app.AlertDialog.Builder(requireContext())
-                alertDialog.setTitle("Cambiar idioma")
-                alertDialog.setMessage("Estás seguro de que queres cambiar ao idioma a galego?")
-                alertDialog.setPositiveButton("Sí") { _, _ ->
-                    Toast.makeText(requireContext(), "Idioma cambiado", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.setNegativeButton("Non") { _, _ ->
-                    Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.show()
-            }
-            sp_language.setOnClickListener {
-                val alertDialog: android.app.AlertDialog.Builder =
-                    android.app.AlertDialog.Builder(requireContext())
-                alertDialog.setTitle("Cambiar idioma")
-                alertDialog.setMessage("Estás seguro de que quieres cambiar el idioma a español?")
-                alertDialog.setPositiveButton("Sí") { _, _ ->
-                    Toast.makeText(requireContext(), "Idioma cambiado", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.setNegativeButton("No") { _, _ ->
-                    Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.show()
-            }
-            cz_language.setOnClickListener {
-                val alertDialog: android.app.AlertDialog.Builder =
-                    android.app.AlertDialog.Builder(requireContext())
-                alertDialog.setTitle("Změnit jazyk")
-                alertDialog.setMessage("Jste si jisti, že chcete změnit jazyk na češtinu?")
-                alertDialog.setPositiveButton("Ano") { _, _ ->
-                    Toast.makeText(requireContext(), "Jazyk změněn", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.setNegativeButton("Ne") { _, _ ->
-                    Toast.makeText(requireContext(), "Zrušeno", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.show()
-            }
-            en_language.setOnClickListener {
-                val alertDialog: android.app.AlertDialog.Builder =
-                    android.app.AlertDialog.Builder(requireContext())
-                alertDialog.setTitle("Change language")
-                alertDialog.setMessage("Are you sure you want to change the language to English?")
-                alertDialog.setPositiveButton("Yes") { _, _ ->
-                    Toast.makeText(requireContext(), "Language changed", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.setNegativeButton("No") { _, _ ->
-                    Toast.makeText(requireContext(), "Cancelled", Toast.LENGTH_SHORT).show()
-                }
-                alertDialog.show()
-            }
+
+            // Redirigir a la actividad de inicio (o la actividad intro en tu caso)
+            val intent = Intent(requireContext(), IntroActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+
+            // Limpiar la pila de actividades
+            requireActivity().finishAffinity()
+
+            dialog.dismiss()
         }
+
+        builder.setNegativeButton("No") { dialog, _ ->
+            dialog.dismiss()
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+    }
+    fun onButtonLanguageClick(idi: String) {
+        val locale = Locale(idi)
+        Locale.setDefault(locale)
+
+        val configuration = Configuration()
+        configuration.setLocale(locale)
+
+        val resources = requireContext().resources
+        resources.updateConfiguration(configuration, resources.displayMetrics)
+
+        val intent = Intent(requireContext(), MainActivity::class.java)
+        startActivity(intent)
+        requireActivity().finishAffinity()
     }
 }
