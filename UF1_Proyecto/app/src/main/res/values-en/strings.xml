@@ -55,4 +55,26 @@
     <string name="candy_count">Number of candies required</string>
     <string name="weaknesses">Weaknesses</string>
 
+    <!-- In-App Controller -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="incorrect">Incorrect!</string>
+    <string name="correct">Correct!</string>
+    <string name="alreadyreveal">Already revealed!</string>
+    <string name="noemptyspaces">Fill in all fields!</string>
+    <string name="correctlogin">Successful Login</string>
+    <string name="incorrectlogin">Login Error</string>
+    <string name="correctregister">Successful Registration</string>
+    <string name="incorrectregister">Registration Error</string>
+    <string name="correctdelete">Account Deleted</string>
+    <string name="incorrectdelete">Error Deleting Account</string>
+    <string name="correctlogout">Logout Successful</string>
+    <string name="incorrectlogout">Error Logging Out</string>
+    <string name="signoutacc">Sign Out</string>
+    <string name="deleteacc">Delete Account</string>
+    <string name="deleteaccquestion">Are you sure you want to delete your account?</string>
+    <string name="signoutaccquestion">Are you sure you want to sign out?</string>
+    <string name="passwordconflict">Passwords do not match!</string>
+
+
 </resources>

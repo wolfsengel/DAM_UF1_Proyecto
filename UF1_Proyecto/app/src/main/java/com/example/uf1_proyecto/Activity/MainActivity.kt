@@ -7,9 +7,16 @@ import androidx.navigation.findNavController
 import com.example.uf1_proyecto.R
 
 class MainActivity : AppCompatActivity() {
+
+    private var lastLoginDate: Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        lastLoginDate = System.currentTimeMillis()
+        //guardar en shared preferences
+
 
         val navController = findNavController(R.id.nav_host_fragment)
         findViewById<View>(R.id.profile).setOnClickListener {

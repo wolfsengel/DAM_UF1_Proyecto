@@ -50,4 +50,26 @@
     <string name="candy_count">Número de doces necesarios</string>
     <string name="weaknesses">Debilidades</string>
 
+    <!-- Controlador In-App -->
+    <string name="yes">Sí</string>
+    <string name="no">Non</string>
+    <string name="incorrect">¡Incorrecto!</string>
+    <string name="correct">¡Correcto!</string>
+    <string name="alreadyreveal">¡Xa foi revelado!</string>
+    <string name="noemptyspaces">¡Completa todos os campos!</string>
+    <string name="correctlogin">Inicio de Sesión Correcto</string>
+    <string name="incorrectlogin">Erro no Inicio de Sesión</string>
+    <string name="correctregister">Rexistro Correcto</string>
+    <string name="incorrectregister">Erro no Rexistro</string>
+    <string name="correctdelete">Conta Borada</string>
+    <string name="incorrectdelete">Erro ao Borrar Conta</string>
+    <string name="correctlogout">Peche de Sesión Correcto</string>
+    <string name="incorrectlogout">Erro ao Pechar Sesión</string>
+    <string name="signoutacc">Pechar Sesión</string>
+    <string name="deleteacc">Borrar Conta</string>
+    <string name="deleteaccquestion">Estás seguro de que queres borrar a túa conta?</string>
+    <string name="signoutaccquestion">Estás seguro de que queres pechar a sesión?</string>
+    <string name="passwordconflict">¡As contrasinais non coinciden!</string>
+
+
 </resources>

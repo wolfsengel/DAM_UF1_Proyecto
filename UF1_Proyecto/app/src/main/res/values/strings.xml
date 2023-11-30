@@ -56,4 +56,25 @@
     <string name="candy_count">Número de caramelos necesarios</string>
     <string name="weaknesses">Debilidades</string>
 
+    <!-- In-App Controller -->
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="incorrect">¡Incorrecto!</string>
+    <string name="correct">¡Correcto!</string>
+    <string name="alreadyreveal">¡Ya ha sido revelado!</string>
+    <string name="noemptyspaces">¡Rellena todos los campos!</string>
+    <string name="correctlogin">Inicio de Sesión Correcto</string>
+    <string name="incorrectlogin">Error en Inicio de Sesión</string>
+    <string name="correctregister">Registro Correcto</string>
+    <string name="incorrectregister">Error en Registro</string>
+    <string name="correctdelete">Cuenta Borrada</string>
+    <string name="incorrectdelete">Error al Borrar Cuenta</string>
+    <string name="correctlogout">Cierre de Sesión Correcto</string>
+    <string name="incorrectlogout">Error al Cerrar Sesión</string>
+    <string name="signoutacc">Cerrar Sesión</string>
+    <string name="deleteacc">Borrar Cuenta</string>
+    <string name="deleteaccquestion">¿Estás seguro de que quieres borrar tu cuenta?</string>
+    <string name="signoutaccquestion">¿Estás seguro de que quieres Cerrar Sesión?</string>
+    <string name="passwordconflict">¡Las contraseñas no coinciden!</string>
+
 </resources>

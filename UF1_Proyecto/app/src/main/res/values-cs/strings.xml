@@ -50,4 +50,26 @@
     <string name="candy_count">Počet potřebných cukroví</string>
     <string name="weaknesses">Slabiny</string>
 
+    <!-- Controlador In-App -->
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="incorrect">Nesprávně!</string>
+    <string name="correct">Správně!</string>
+    <string name="alreadyreveal">Již bylo odhaleno!</string>
+    <string name="noemptyspaces">Vyplňte všechna pole!</string>
+    <string name="correctlogin">Přihlášení proběhlo správně</string>
+    <string name="incorrectlogin">Chyba při přihlášení</string>
+    <string name="correctregister">Registrace proběhla správně</string>
+    <string name="incorrectregister">Chyba při registraci</string>
+    <string name="correctdelete">Účet byl smazán</string>
+    <string name="incorrectdelete">Chyba při mazání účtu</string>
+    <string name="correctlogout">Odhlášení proběhlo správně</string>
+    <string name="incorrectlogout">Chyba při odhlašování</string>
+    <string name="signoutacc">Odhlásit se</string>
+    <string name="deleteacc">Smazat účet</string>
+    <string name="deleteaccquestion">Opravdu chcete smazat svůj účet?</string>
+    <string name="signoutaccquestion">Opravdu chcete se odhlásit?</string>
+    <string name="passwordconflict">Hesla se neshodují!</string>
+
+
 </resources>
