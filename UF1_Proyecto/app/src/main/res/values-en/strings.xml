@@ -77,4 +77,15 @@
     <string name="passwordconflict">Passwords do not match!</string>
 
 
+    <string name="credits1">Long, long ago in a faraway galaxy…</string>
+    <string name="credits2">ACKNOWLEDGEMENTS FOR THE PROJECT</string>
+    <string name="credits3">This project was made possible by the effort and dedication of many people who contributed to it</string>
+    <string name="credits4">We would like to especially thank our director, who led us with his vision and passion for the story</string>
+    <string name="credits5">We would also like to thank our technical team, who realized the most amazing scenes with their talent and creativity</string>
+    <string name="credits6">Furthermore, we would like to thank our cast, who brought the characters to life with their acting and charisma</string>
+    <string name="credits7">And last but not least, we would like to thank our audience, who accompanied us on this adventurous journey and supported us with their enthusiasm and loyalty</string>
+    <string name="credits8">Thank you all for being part of this project</string>
+    <string name="credits9">May the Force be with you</string>
+
+
 </resources>

@@ -72,4 +72,15 @@
     <string name="passwordconflict">Hesla se neshodují!</string>
 
 
+    <string name="credits1">Dávno, dávno v daleké galaxii…</string>
+    <string name="credits2">PODĚKOVÁNÍ ZA PROJEKT</string>
+    <string name="credits3">Tento projekt byl možný díky úsilí a nasazení mnoha lidí, kteří se na něm podíleli</string>
+    <string name="credits4">Chtěli bychom zvlášť poděkovat našemu režisérovi, který nás vedl svou vizí a vášní pro příběh</string>
+    <string name="credits5">Také bychom chtěli poděkovat našemu technickému týmu, který zrealizoval nejúžasnější scény svým talentem a kreativitou</string>
+    <string name="credits6">Dále bychom chtěli poděkovat našemu obsazení, které oživilo postavy svým herectvím a charismatem</string>
+    <string name="credits7">A nakonec, ale ne méně důležitě, bychom chtěli poděkovat našemu publiku, které nás doprovázelo na této dobrodružné cestě a podpořilo nás svým nadšením a věrností</string>
+    <string name="credits8">Děkujeme všem, že jste byli součástí tohoto projektu</string>
+    <string name="credits9">Ať vás Síla provází</string>
+
+
 </resources>

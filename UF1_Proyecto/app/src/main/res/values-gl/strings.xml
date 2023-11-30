@@ -72,4 +72,15 @@
     <string name="passwordconflict">¡As contrasinais non coinciden!</string>
 
 
+    <string name="credits1">Hai moito, moito tempo nunha galaxia moi lonxana…</string>
+    <string name="credits2">AGRADECEMENTOS POLO PROXECTO</string>
+    <string name="credits3">Este proxecto foi posible grazas ao esforzo e dedicación de moitas persoas que contribuíron a el</string>
+    <string name="credits4">Gustaríanos agradecer especialmente ao noso director, que nos guiou coa súa visión e paixón pola historia</string>
+    <string name="credits5">Tamén gustaríanos agradecer ao noso equipo técnico, que realizou as escenas máis asombrosas co seu talento e creatividade</string>
+    <string name="credits6">Ademais, gustaríanos agradecer ao noso elenco, que deu vida aos personaxes coa súa actuación e carisma</string>
+    <string name="credits7">E por último, pero non menos importante, gustaríanos agradecer ao noso público, que nos acompañou nesta aventura e nos apoiou co seu entusiasmo e lealdade</string>
+    <string name="credits8">Grazas a todos por ser parte deste proxecto</string>
+    <string name="credits9">Que a Forza estea convosco</string>
+
+
 </resources>

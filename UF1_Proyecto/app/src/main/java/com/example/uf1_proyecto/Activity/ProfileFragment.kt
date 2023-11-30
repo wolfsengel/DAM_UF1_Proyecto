@@ -1,6 +1,5 @@
 package com.example.uf1_proyecto.Activity
 
-import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
@@ -10,9 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
 import com.example.uf1_proyecto.R
 import com.google.firebase.auth.FirebaseAuth
@@ -25,6 +22,7 @@ class ProfileFragment : Fragment() {
     private lateinit var nombreUsuarioP: TextView
     private lateinit var Auth: FirebaseAuth
     private lateinit var user: FirebaseUser
+    private lateinit var credits_btn: ImageView
 
     private lateinit var gal_language: ImageView
     private lateinit var sp_language: ImageView
@@ -44,6 +42,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun initView(view: View) {
+        credits_btn = view.findViewById(R.id.credits_btn)
         gal_language = view.findViewById(R.id.galician_flag)
         sp_language = view.findViewById(R.id.spanish_flag)
         cz_language = view.findViewById(R.id.czech_flag)
@@ -73,6 +72,10 @@ class ProfileFragment : Fragment() {
         }
         en_language.setOnClickListener {
             onButtonLanguageClick("en")
+        }
+        credits_btn.setOnClickListener {
+            val intent = Intent(requireContext(), CreditsActivity::class.java)
+            startActivity(intent)
         }
     }
 

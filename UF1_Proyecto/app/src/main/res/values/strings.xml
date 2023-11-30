@@ -77,4 +77,15 @@
     <string name="signoutaccquestion">¿Estás seguro de que quieres Cerrar Sesión?</string>
     <string name="passwordconflict">¡Las contraseñas no coinciden!</string>
 
+
+    <string name="credits1">Hace mucho tiempo, en una galaxia muy, muy lejana…</string>
+    <string name="credits2">AGRADECIMIENTOS DEL PROYECTO</string>
+    <string name="credits3">Este proyecto ha sido posible gracias al esfuerzo y la dedicación de muchas personas que han colaborado en él</string>
+    <string name="credits4">Queremos agradecer especialmente a nuestro director, que nos ha guiado con su visión y su pasión por la historia</string>
+    <string name="credits5">También queremos agradecer a nuestro equipo técnico, que ha hecho realidad las escenas más espectaculares con su talento y su creatividad</string>
+    <string name="credits6">Asimismo, queremos agradecer a nuestro elenco, que ha dado vida a los personajes con su interpretación y su carisma</string>
+    <string name="credits7">Por último, pero no menos importante, queremos agradecer a nuestro público, que nos ha acompañado en esta aventura y nos ha apoyado con su entusiasmo y su fidelidad</string>
+    <string name="credits8">Gracias a todos por formar parte de este proyecto</string>
+    <string name="credits9">Que la Fuerza os acompañe</string>
+
 </resources>
