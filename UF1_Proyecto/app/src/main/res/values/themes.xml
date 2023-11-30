@@ -1,6 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.UF1_Proyecto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimaryDark">#19191b</item>
+
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="Theme.UF1_Proyecto" parent="Base.Theme.UF1_Proyecto" />
