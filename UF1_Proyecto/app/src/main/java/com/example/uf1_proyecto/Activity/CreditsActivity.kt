@@ -43,17 +43,15 @@ class CreditsActivity : AppCompatActivity() {
         animado7 = findViewById(R.id.creditss17)
         animado8 = findViewById(R.id.creditss18)
         animado9 = findViewById(R.id.creditss19)
-        panel.visibility = LinearLayout.VISIBLE
         anim1()
-        anim2()
-        anim3()
-        anim4()
-        anim5()
-        anim6()
-        anim7()
-        anim8()
-        anim9()
-        panel.visibility = LinearLayout.INVISIBLE
+        //anim2()
+        //anim3()
+        //anim4()
+        //anim5()
+        //anim6()
+        //anim7()
+        //anim8()
+        //anim9()
 
     }
 
