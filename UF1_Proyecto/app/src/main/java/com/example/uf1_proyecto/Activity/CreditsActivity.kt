@@ -36,72 +36,14 @@ class CreditsActivity : AppCompatActivity() {
     private fun initView() {
         panel = findViewById(R.id.container_credits)
         animado1 = findViewById(R.id.creditss11)
-        animado2 = findViewById(R.id.creditss12)
-        animado3 = findViewById(R.id.creditss13)
-        animado4 = findViewById(R.id.creditss14)
-        animado5 = findViewById(R.id.creditss15)
-        animado6 = findViewById(R.id.creditss16)
-        animado7 = findViewById(R.id.creditss17)
-        animado8 = findViewById(R.id.creditss18)
-        animado9 = findViewById(R.id.creditss19)
         anim1()
-        anim2()/*
-        anim3()
-        anim4()
-        anim5()
-        anim6()
-        anim7()
-        anim8()
-        anim9()*/
 
     }
-
 
     fun anim1(){
         val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado1.startAnimation(animation)
 
     }
-    fun anim2(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation2)
-        animado2.startAnimation(animation)
-
-    }/*
-    fun anim3(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado3.startAnimation(animation)
-        animado3.visibility = LinearLayout.GONE
-    }
-    fun anim4(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado4.startAnimation(animation)
-        animado4.visibility = LinearLayout.GONE
-    }
-    fun anim5(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado5.startAnimation(animation)
-        animado5.visibility = LinearLayout.GONE
-    }
-    fun anim6(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado6.startAnimation(animation)
-        animado6.visibility = LinearLayout.GONE
-    }
-    fun anim7(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado7.startAnimation(animation)
-        animado7.visibility = LinearLayout.GONE
-    }
-    fun anim8(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado8.startAnimation(animation)
-        animado8.visibility = LinearLayout.GONE
-    }
-    fun anim9(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
-        animado9.startAnimation(animation)
-        animado9.visibility = LinearLayout.GONE
-    }
-*/
 
 }

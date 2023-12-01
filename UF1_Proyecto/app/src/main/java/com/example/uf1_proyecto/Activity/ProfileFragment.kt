@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -23,6 +24,9 @@ class ProfileFragment : Fragment() {
     private lateinit var Auth: FirebaseAuth
     private lateinit var user: FirebaseUser
     private lateinit var credits_btn: ImageView
+
+    private lateinit var alonsoact: ImageView
+    private lateinit var alonso: ImageView
 
     private lateinit var gal_language: ImageView
     private lateinit var sp_language: ImageView
@@ -42,6 +46,8 @@ class ProfileFragment : Fragment() {
     }
 
     private fun initView(view: View) {
+        alonsoact = view.findViewById(R.id.shapeableImageView2)
+        alonso = view.findViewById(R.id.elNano)
         credits_btn = view.findViewById(R.id.credits_btn)
         gal_language = view.findViewById(R.id.galician_flag)
         sp_language = view.findViewById(R.id.spanish_flag)
@@ -77,6 +83,14 @@ class ProfileFragment : Fragment() {
             val intent = Intent(requireContext(), CreditsActivity::class.java)
             startActivity(intent)
         }
+        alonsoact.setOnClickListener {
+            startAnimation()
+        }
+    }
+
+    private fun startAnimation() {
+        val animation: Animation = android.view.animation.AnimationUtils.loadAnimation(requireContext(), R.anim.elnanomagicalonso)
+        alonso.startAnimation(animation)
     }
 
     private fun mostrarDialogo(cual:Int) {
