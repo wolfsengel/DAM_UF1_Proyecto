@@ -1,5 +1,7 @@
 package com.example.uf1_proyecto.Activity
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
@@ -19,8 +21,6 @@ import com.bumptech.glide.Glide
 import com.example.uf1_proyecto.Domain.PokeItemK
 import com.example.uf1_proyecto.R
 import com.google.gson.Gson
-import android.content.Context
-import android.content.SharedPreferences
 
 class GuessGameFragment : Fragment() {
 
@@ -38,6 +38,7 @@ class GuessGameFragment : Fragment() {
     private lateinit var mRequestQueue: RequestQueue
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         loadHighscore()
     }

@@ -1,16 +1,17 @@
 package com.example.uf1_proyecto.Activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import androidx.appcompat.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import com.example.uf1_proyecto.R
 
 class IntroActivity : AppCompatActivity() {
 
     private lateinit var pikanano: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
         val getInButton: AppCompatButton = findViewById(R.id.getInButton)
