@@ -15,14 +15,6 @@ import kotlinx.coroutines.delay
 class CreditsActivity : AppCompatActivity() {
 
     private lateinit var animado1: TextView
-    private lateinit var animado2: TextView
-    private lateinit var animado3: TextView
-    private lateinit var animado4: TextView
-    private lateinit var animado5: TextView
-    private lateinit var animado6: TextView
-    private lateinit var animado7: TextView
-    private lateinit var animado8: TextView
-    private lateinit var animado9: TextView
     private lateinit var panel: LinearLayout
 
 
