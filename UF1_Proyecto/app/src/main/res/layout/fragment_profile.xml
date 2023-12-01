@@ -30,6 +30,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/ic_alonso"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/profile_photo_border"
                         android:layout_width="200dp"
@@ -156,12 +166,12 @@
                         android:id="@+id/credits_btn"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:layout_marginTop="100dp"
                         android:src="@drawable/btn_credits"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"/>
+                        app:layout_constraintTop_toTopOf="@+id/constraintLayout3" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

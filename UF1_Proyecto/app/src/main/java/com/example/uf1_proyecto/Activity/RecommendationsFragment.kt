@@ -60,6 +60,7 @@ class RecommendationsFragment : Fragment() {
         mRequestQueue.add(mStringRequest)
     }
     private fun sendRequest2(potato:String) {
+        titleF.text = ""
         mRequestQueue = Volley.newRequestQueue(requireContext())
 
         loading1.visibility = View.VISIBLE
@@ -89,16 +90,18 @@ class RecommendationsFragment : Fragment() {
         loading1 = view.findViewById(R.id.loading)
         searchBtn = view.findViewById(R.id.searchBtn)
         buscardor = view.findViewById(R.id.search_bar)
-        titleF = view.findViewById(R.id.estrenos_movies)
+        titleF = view.findViewById(R.id.titleF)
 
         searchBtn.setOnClickListener {
+            sendRequest2(buscardor.text.toString())
             titleF.text = ""
+            sb.setLength(0)
             sb.append("\"")
             sb.append(buscardor.text.toString())
             sb.append("\"")
             val text:String = sb.toString()
             titleF.text = text
-            sendRequest2(buscardor.text.toString())
+
         }
 
     }

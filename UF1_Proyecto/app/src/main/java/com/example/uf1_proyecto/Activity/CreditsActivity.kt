@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.R.anim
 import com.example.uf1_proyecto.R.layout
+import kotlinx.coroutines.delay
 
 class CreditsActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class CreditsActivity : AppCompatActivity() {
     private lateinit var animado7: TextView
     private lateinit var animado8: TextView
     private lateinit var animado9: TextView
-    private lateinit var panel: ConstraintLayout
+    private lateinit var panel: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,16 +45,17 @@ class CreditsActivity : AppCompatActivity() {
         animado8 = findViewById(R.id.creditss18)
         animado9 = findViewById(R.id.creditss19)
         anim1()
-        //anim2()
-        //anim3()
-        //anim4()
-        //anim5()
-        //anim6()
-        //anim7()
-        //anim8()
-        //anim9()
+        anim2()/*
+        anim3()
+        anim4()
+        anim5()
+        anim6()
+        anim7()
+        anim8()
+        anim9()*/
 
     }
+
 
     fun anim1(){
         val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
@@ -63,35 +65,43 @@ class CreditsActivity : AppCompatActivity() {
     fun anim2(){
         val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation2)
         animado2.startAnimation(animation)
-    }
+
+    }/*
     fun anim3(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation3)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado3.startAnimation(animation)
+        animado3.visibility = LinearLayout.GONE
     }
     fun anim4(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation4)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado4.startAnimation(animation)
+        animado4.visibility = LinearLayout.GONE
     }
     fun anim5(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation5)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado5.startAnimation(animation)
+        animado5.visibility = LinearLayout.GONE
     }
     fun anim6(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation6)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado6.startAnimation(animation)
+        animado6.visibility = LinearLayout.GONE
     }
     fun anim7(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation7)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado7.startAnimation(animation)
+        animado7.visibility = LinearLayout.GONE
     }
     fun anim8(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation8)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado8.startAnimation(animation)
+        animado8.visibility = LinearLayout.GONE
     }
     fun anim9(){
-        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation9)
+        val animation: Animation = AnimationUtils.loadAnimation(this, anim.animation1)
         animado9.startAnimation(animation)
+        animado9.visibility = LinearLayout.GONE
     }
-
+*/
 
 }

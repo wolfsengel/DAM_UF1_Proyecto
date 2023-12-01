@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <scale
-        android:fromXScale="1.0"
-        android:fromYScale="1.0"
+        android:fromXScale="2.0"
+        android:fromYScale="2.0"
         android:toXScale="1.0dp"
         android:toYScale="1.0dp"
         android:pivotX="50%"
@@ -10,7 +10,7 @@
         android:duration="10000"
         />
     <translate
-        android:fromYDelta="1000%"
+        android:fromYDelta="500%"
         android:toYDelta="-100%"
         android:duration="10000"
         />
