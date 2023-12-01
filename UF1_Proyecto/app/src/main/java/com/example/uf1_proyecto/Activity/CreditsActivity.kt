@@ -15,7 +15,6 @@ import kotlinx.coroutines.delay
 class CreditsActivity : AppCompatActivity() {
 
     private lateinit var animado1: TextView
-    private lateinit var panel: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,8 +25,7 @@ class CreditsActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        panel = findViewById(R.id.container_credits)
-        animado1 = findViewById(R.id.creditss11)
+        animado1 = findViewById(R.id.creditss12)
         anim1()
 
     }
