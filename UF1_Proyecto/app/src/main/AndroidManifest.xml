@@ -18,26 +18,30 @@
         <activity
             android:windowLayoutInDisplayCutoutMode="shortEdges"
             android:name=".Activity.CreditsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:windowLayoutInDisplayCutoutMode="shortEdges"
             android:name=".Activity.DetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:windowLayoutInDisplayCutoutMode="shortEdges"
             android:name=".Activity.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:windowLayoutInDisplayCutoutMode="shortEdges"
             android:name=".Activity.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:windowLayoutInDisplayCutoutMode="shortEdges"
             android:name=".Activity.IntroActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -45,7 +49,8 @@
             android:windowLayoutInDisplayCutoutMode="shortEdges"
             android:name=".Activity.MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustNothing"/>
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
