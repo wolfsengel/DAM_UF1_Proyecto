@@ -1,7 +1,6 @@
 package com.example.uf1_proyecto.Activity
 
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +14,6 @@ import androidx.fragment.app.Fragment
 import com.example.uf1_proyecto.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import java.util.Locale
 
 class ProfileFragment : Fragment() {
     private lateinit var borrarBtn: Button
@@ -126,17 +124,23 @@ class ProfileFragment : Fragment() {
         dialog.show()
     }
     fun onButtonLanguageClick(idi: String) {
-        val locale = Locale(idi)
-        Locale.setDefault(locale)
+        val config = requireContext().resources.configuration
+        val sysLocale: java.util.Locale =
+            config.locales.get(0)
+        if (idi != "" && sysLocale.language != idi) {
+            val locale = java.util.Locale(idi)
+            java.util.Locale.setDefault(locale)
+            config.setLocale(locale)
+            requireContext().resources.updateConfiguration(
+                config,
+                requireContext().resources.displayMetrics
+            )
 
-        val configuration = Configuration()
-        configuration.setLocale(locale)
-
-        val resources = requireContext().resources
-        resources.updateConfiguration(configuration, resources.displayMetrics)
-
-        val intent = Intent(requireContext(), MainActivity::class.java)
-        startActivity(intent)
-        requireActivity().finishAffinity()
+            val refresh = Intent(requireContext(), MainActivity::class.java)
+            startActivity(refresh)
+            requireActivity().finish()
+        }
     }
+
+
 }
